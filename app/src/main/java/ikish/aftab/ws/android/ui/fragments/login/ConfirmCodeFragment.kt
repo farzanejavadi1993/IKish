@@ -32,6 +32,7 @@ import javax.inject.Inject
 class ConfirmCodeFragment : Fragment() , GoogleApiClient.ConnectionCallbacks{
 
     //region Parameter
+
     @Inject
     lateinit var  sharedPreferences: SecurePreferences
     private var  uuid: String?=""

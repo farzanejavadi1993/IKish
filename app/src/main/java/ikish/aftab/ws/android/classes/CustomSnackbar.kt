@@ -22,6 +22,7 @@ import ikish.aftab.ws.android.R
 
 class CustomSnackbar(private val context: Context) {
 
+
     private var textColor: Int = ContextCompat.getColor(context, R.color.white)
     private var actionTextColor: Int = ContextCompat.getColor(context, R.color.topaz)
     private var duration: Int = Snackbar.LENGTH_SHORT
