@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="login_logo_size">100dp</dimen>
+    <dimen name="login_logo_left_right_margin">130dp</dimen>
+    <dimen name="login_logo_top_margin">34dp</dimen>
+    <dimen name="login_mobile_medium_size">11sp</dimen>
+
+    <dimen name="login_mobile_medium_top_margin">27dp</dimen>
+    <dimen name="login_mobile_medium_end_margin">22dp</dimen>
+    <dimen name="login_mobile_number_size">13sp</dimen>
+    <dimen name="login_rules_left_right_margin">63dp</dimen>
+    <dimen name="login_rules_top_margin">70dp</dimen>
+    <dimen name="login_get_code_margin">14sp</dimen>
+
+
+
+    <dimen name="toolbar_size">55dp</dimen>
+    <dimen name="toolbar_left_right_margin">22dp</dimen>
+    <dimen name="image_size">24dp</dimen>
+    <dimen name="margin_normal">22dp</dimen>
+    <dimen name="home_weather_type_margin">9dp</dimen>
+    <dimen name="home_weather_type_text_size">12sp</dimen>
+    <dimen name="home_weather_type_text_top_margin">12dp</dimen>
+    <dimen name="home_weather_type_text_end_margin">8dp</dimen>
+    <dimen name="home_weather_description_text_size">11sp</dimen>
+    <dimen name="home_weather_description_bottom_margin">4dp</dimen>
+    <dimen name="home_weather_description_end_margin">9dp</dimen>
+    <dimen name="home_temperature_size">30sp</dimen>
+    <dimen name="home_temperature_margin">9dp</dimen>
+    <dimen name="home_tourism_description_size">11sp</dimen>
+    <dimen name="home_tourism_description_start_margin">9dp</dimen>
+    <dimen name="home_tourism_description_bottom_margin">4dp</dimen>
+
+    <dimen name="home_condition_size">14sp</dimen>
+    <dimen name="home_condition_start_margin">9dp</dimen>
+    <dimen name="home_condition_bottom_margin">8dp</dimen>
+    <dimen name="home_best_tours_size">13sp</dimen>
+    <dimen name="home_yellow_view_width">50dp</dimen>
+    <dimen name="home_yellow_view_height">4dp</dimen>
+    <dimen name="home_yellow_view_right_margin">22dp</dimen>
+    <dimen name="home_yellow_view_top_margin">3dp</dimen>
+    <dimen name="home_see_all_size">11sp</dimen>
+
+
+    <dimen name="home_iv_item_offer_width">111dp</dimen>
+    <dimen name="home_iv_item_offer_height">74dp</dimen>
+    <dimen name="home_iv_item_offer_top_bottom_margin">5dp</dimen>
+
+    <dimen name="home_title_offer_top_margin">5dp</dimen>
+    <dimen name="home_title_offer_end_margin">7dp</dimen>
+    <dimen name="home_description_offer_width">183dp</dimen>
+    <dimen name="home_description_offer_end_margin">7dp</dimen>
+    <dimen name="home_description_offer_bottom_margin">12dp</dimen>
+
+    <dimen name="home_tour_place_title_top_margin">31dp</dimen>
+    <dimen name="home_tour_place_title_right_left_margin">22dp</dimen>
+    <dimen name="home_iv_tour_item_width">144dp</dimen>
+    <dimen name="home_iv_tour_item_height">96dp</dimen>
+    <dimen name="services_title_end_margin">22dp</dimen>
+    <dimen name="services_title_item_top_end_margin">18dp</dimen>
+
+
+    <dimen name="profile_card_left_right_margin">22dp</dimen>
+    <dimen name="profile_card_height">172dp</dimen>
+    <dimen name="profile_name_user_size">14sp</dimen>
+    <dimen name="profile_image_user_size">80dp</dimen>
+    <dimen name="profile_image_user_top_margin">14dp</dimen>
+    <dimen name="profile_btn_see_width">106dp</dimen>
+    <dimen name="profile_btn_see_size">10sp</dimen>
+
+
+
+
+
+    <dimen name="profile_layout_item_height">70dp</dimen>
+    <dimen name="profile_image_item_height">40dp</dimen>
+    <dimen name="profile_layout_item_left_right_margin">22dp</dimen>
+    <dimen name="profile_layout_item_top_margin">32dp</dimen>
+
+    <dimen name="question_title_size">18sp</dimen>
+
+
+    <dimen name="passenger_title_size">18sp</dimen>
+    <dimen name="passenger_icon_empty_page">96dp</dimen>
+    <dimen name="passenger_icon_empty_page_top_margin">90dp</dimen>
+    <dimen name="not_find_description_left_right_margin">37dp</dimen>
+    <dimen name="not_find_description_top_margin">8dp</dimen>
+    <dimen name="not_find_top_margin">12dp</dimen>
+    <dimen name="not_find_size">12sp</dimen>
+    <dimen name="not_find_description_size">13sp</dimen>
+    <dimen name="item_passenger_height">75dp</dimen>
+    <dimen name="item_passenger_iv_size">22dp</dimen>
+    <dimen name="item_passenger_iv_right_margin">16dp</dimen>
+    <dimen name="item_passenger_tv_right_margin">8dp</dimen>
+    <dimen name="item_passenger_tv_top_margin">10dp</dimen>
+    <dimen name="item_passenger_iv_top_margin">16dp</dimen>
+    <dimen name="button_size">36dp</dimen>
+    <dimen name="snackbar_textsize">8sp</dimen>
+
+
+
+    <dimen name="dayOfMonthBoxSize">44dp</dimen>
+    <dimen name="text_size_week">14sp</dimen>
+    <dimen name="dayOfMonthPaddingBottom">0dp</dimen>
+
+
+
+</resources>

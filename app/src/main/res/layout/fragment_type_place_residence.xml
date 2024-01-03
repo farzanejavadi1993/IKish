@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/pale_gray"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+                <ImageView
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+
+                    android:src="@drawable/ic_back"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_below="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="16sp"
+                        android:gravity="right"
+                        android:text="@string/type_palace_residence"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:id="@+id/tv_title_type"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="right"
+                        android:text="@string/title_type_residence"
+                        />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/btn_type_residence"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#e6e5ee"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#dfdfdf"
+                        android:layout_height="48dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/tv_type_residence"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:textColor="#8a8a8a"
+                                android:lineSpacingExtra="9sp"
+                                android:gravity="end"
+                                android:text="انتخاب کنید‌"
+                                />
+                            <ImageView
+                                android:rotation="270"
+                                android:layout_marginLeft="16dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_fi_rr_angle_small_left"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"/>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:id="@+id/tvChooseType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#8a8a8a"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="right"
+                        android:text="@string/choose_type_residence"
+                        />
+                    <TextView
+                        android:id="@+id/tv_title_bran_o_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="right"
+                        android:text="@string/title_status_residence"
+                        />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/btn_status_residence"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#e6e5ee"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#dfdfdf"
+                        android:layout_height="48dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/tv_status_residence"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:textColor="#8a8a8a"
+                                android:lineSpacingExtra="9sp"
+                                android:gravity="end"
+                                android:text="انتخاب کنید‌"
+                                />
+                            <ImageView
+                                android:rotation="270"
+                                android:layout_marginLeft="16dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_fi_rr_angle_small_left"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"/>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:id="@+id/tv_description_status_O_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#8a8a8a"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="right"
+                        android:text="@string/description_status_residence"
+                        />
+                    <TextView
+                        android:id="@+id/tv_title_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="right"
+                        android:text="@string/title_name_residence"
+                        />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#e6e5ee"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#dfdfdf"
+                        android:layout_height="48dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                           <EditText
+                               android:id="@+id/edt_name_residence"
+                               android:layout_marginRight="16dp"
+                               android:layout_marginLeft="16dp"
+                               android:fontFamily="@font/iransans"
+                               android:textStyle="normal"
+                               android:textSize="13sp"
+                               android:textColor="#474747"
+                               android:lineSpacingExtra="10sp"
+                               android:gravity="right|center"
+                               android:background="@android:color/transparent"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:id="@+id/tv_description_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#8a8a8a"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="right"
+                        android:text="@string/description_name_residence"
+                        />
+                    <TextView
+                        android:id="@+id/tv_title_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="right"
+                        android:text="@string/title_about_residence"
+                        />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#e6e5ee"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#dfdfdf"
+                        android:layout_height="48dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:id="@+id/edt_about_Residence"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:fontFamily="@font/iransans"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:textColor="#474747"
+                                android:lineSpacingExtra="10sp"
+                                android:gravity="right|center"
+                                android:background="@android:color/transparent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_description_about"
+                        android:layout_marginBottom="74dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#8a8a8a"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="right"
+                        android:text="@string/description_about_residence"
+                        />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/card_button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/card_radius_bottom"
+                   >
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_centerVertical="true"
+                        android:id="@+id/btn_add_type_place_residence"
+                        android:layout_width="132dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginEnd="22dp"
+                        android:backgroundTint="@color/very_light_pink"
+                        android:fontFamily="@font/iransans"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/continue_add_residence"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+</layout>

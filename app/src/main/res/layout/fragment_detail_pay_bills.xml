@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:background="@color/pale_gray"
+        android:focusable="true"
+        android:clickable="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="16sp"
+                    android:text="@string/peyment_bills"
+                    android:textColor="#474747"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_back_frament"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginBottom="80dp"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="22dp"
+                app:cornerRadius="10dp"
+                app:strokeColor="#e3e3e3"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/iv_bargh"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/bargh"
+                        app:civ_border_color="@color/back_to_back"
+                        app:civ_border_width="5dp"
+                        app:civ_shadow_radius="10dp"
+                        />
+
+
+                    <TextView
+
+                        android:id="@+id/tv_bargh"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="center_horizontal"
+                        android:text="قبض برق"/>
+
+                    <View
+                        android:background="#e3e3e3"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="نام مشترک"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="زینب علوی"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="مبلغ قبض"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="۳۲،۰۰۰ تومان"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="مهلت پرداخت"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="۱۴۰۰/۰۳/۰۲"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="آدرس"/>
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:gravity="right"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="13sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:text="بلوار خلیج فارس، خلیج فارس ۱۲، پلاک ۱۲"/>
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="تاریخ قرائت کنونی"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="۱۴۰۰/۰۲/۲۵"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="تاریخ قرائت پیشین"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="۱۴۰۰/۰۱/۲۵"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="وضعیت"/>
+                        <TextView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:textColor="#474747"
+                            android:lineSpacingExtra="9sp"
+                            android:text="پرداخت نشده"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_pay_bills"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/topaz"
+            android:fontFamily="@font/iransans"
+            android:lineSpacingExtra="10sp"
+            android:text="پرداخت"
+            android:textColor="#fff"
+            android:layout_marginBottom="24dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+
+</layout>

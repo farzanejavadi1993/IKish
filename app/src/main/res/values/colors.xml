@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="pale_gray">#f3f2f8</color>
+    <color name="back_to_back">#e7e8ee</color>
+    <color name="light_background">#e6e5ee</color>
+    <color name="border_background">#dfdfdf</color>
+
+    <color name="medium_color">#474747</color>
+    <color name="invalid_name_color">#8a8a8a</color>
+    <color name="login_invalid_name_error_color">#ff0b0b</color>
+    <color name="green_color">#18FA21</color>
+    <color name="very_light_color">#c4c4c4</color>
+    <color name="topaz">#13b6ad</color>
+    <color name="sun_yellow">#ffd21d</color>
+    <color name="very_light_pink">#c4c4c4</color>
+    <color name="view_background">#e3e3e3</color>
+
+    <color name="buttonBackgroundColor">#040078</color>
+
+    <color name="week_color">#717171</color>
+    <color name="selected_date_circle_color">#2b303d</color>
+    <color name="default_date_color">#2b303d</color>
+    <color name="range_date_color">@color/default_date_color</color>
+    <color name="disable_date_color">#BDBDBD</color>
+    <color name="range_bg_color">#fff0b0</color>
+    <color name="holiday_date_color">#bf00bf</color>
+    <color name="today_date_color">#51bf4b</color>
+    <color name="headerBackgroundColor">#040078</color>
+
+</resources>

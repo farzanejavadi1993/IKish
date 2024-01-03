@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/cardMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pale_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/iv_back_frament"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/iv_power"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_below="@+id/passenger_toolbar"
+            >
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_marginTop="24dp"
+            android:id="@+id/profile_iv_user"
+            android:layout_width="131dp"
+            android:layout_height="131dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_profile_"
+            app:civ_border_color="@color/back_to_back"
+            app:civ_border_width="1dp"
+            app:civ_shadow_radius="10dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            app:strokeWidth="1dp"
+            app:strokeColor="#e3e3e3"
+            android:id="@+id/btn_edit_image"
+            android:layout_width="156dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="37dp"
+            android:fontFamily="@font/iransans"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="9sp"
+            android:text="تعویض تصویر پروفایل"
+            android:textAlignment="center"
+            android:textColor="@color/topaz"
+            android:textSize="@dimen/profile_btn_see_size"
+            android:textStyle="normal"
+            app:cornerRadius="14dp"
+            app:icon="@drawable/ic_photo_fill"
+            app:iconGravity="textEnd"
+            app:iconSize="18dp"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_name_profile" />
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="21dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal">
+
+                    <TextView
+                        android:id="@+id/tv_first_name"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_first_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_first_name"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_first_name"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="text" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                  >
+
+                    <TextView
+                        android:id="@+id/tv_last_name"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_last_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_last_name"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_last_name"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="text" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_english_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal">
+
+                    <TextView
+                        android:id="@+id/tv_english_first_name"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_english_first_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_english_first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_english_first_name"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_english_first_name"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="text" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_english_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal">
+
+                    <TextView
+                        android:id="@+id/tv_english_last_name"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_english_last_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_english_last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_english_last_name"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_english_last_name"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="text" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_national_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                 >
+
+                    <TextView
+                        android:id="@+id/tv_national_code"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_national_code"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_national_code"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_national_code"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_national_code"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_passport_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:visibility="gone"
+                  >
+
+                    <TextView
+                        android:id="@+id/tv_passport_number"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_passport_number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_passport_number"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_passport_number"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_passport_number"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="number" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_brithday"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                   >
+
+                    <TextView
+                        android:id="@+id/tv_brithday"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_date_of_birth"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_birthday"
+
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_brithday"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/calendarCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_calendar"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="12dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/ic_calendar_fill"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_calendar"
+                                style="@style/H4Left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                 >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/item_passenger_radus"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_gender"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/back_tabs">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="" />
+
+                                <TextView
+                                    android:id="@+id/select1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/back_select"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="38dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_man"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:lineSpacingExtra="9sp"
+                                    android:text="@string/man"
+                                    android:textColor="@color/invalid_name_color"
+
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_woman"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:lineSpacingExtra="9sp"
+                                    android:text="@string/woman"
+                                    android:textColor="@color/topaz"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        style="@style/H5Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_gender"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                   >
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_passenger_mobile_number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        app:cardBackgroundColor="#e6e5ee"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_mobile"
+                        app:strokeColor="#dfdfdf"
+                        app:strokeWidth="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_mobile"
+                            style="@style/H4Left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/iransans"
+                            android:gravity="right"
+                            android:inputType="number"
+                            android:maxLength="11" />
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginRight="22dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="27dp"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#474747"
+                        android:gravity="center_horizontal"
+                        android:text=" احراز هویت با سوال امنیتی"/>
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:layout_marginLeft="22dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/Switch"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginBottom="27dp"
+                    android:fontFamily="@font/iransans"
+                    android:lineSpacingExtra="10sp"
+                    android:text="@string/register"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/topaz"
+                    app:cornerRadius="10dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_mobile">
+
+
+                </com.google.android.material.button.MaterialButton>
+
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

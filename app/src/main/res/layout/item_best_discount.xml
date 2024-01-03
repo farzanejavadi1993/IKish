@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="bestDiscount"
+            type="ikish.aftab.ws.android.model.HotDiscountModel" />
+    </data>
+    <LinearLayout
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:gravity="right"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.github.siyamed.shapeimageview.RoundedImageView
+           android:id="@+id/iv_best_discount"
+            android:layout_width="149dp"
+            app:siRadius="12dp"
+            app:siBorderWidth="1dp"
+            app:siBorderColor="#eee"
+            android:layout_height="90dp"/>
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#474747"
+            android:lineSpacingExtra="10sp"
+            android:gravity="end"
+            android:text="@{bestDiscount.title}"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="8dp"
+            android:layout_width="80dp"
+            app:cardCornerRadius="8dp"
+            android:backgroundTint="#e3e3e3"
+            android:layout_height="24dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:textColor="#474747"
+                    android:lineSpacingExtra="10sp"
+                    android:gravity="end"
+                    android:text="@{bestDiscount.amountDiscount}"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>

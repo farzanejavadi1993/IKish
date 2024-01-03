@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/pale_gray"
+    app:cardCornerRadius="14dp">
+
+    <LinearLayout
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar_dialog"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/toolbar_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="22dp"
+
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:fontFamily="@font/iransans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                android:lineSpacingExtra="10sp"
+                android:text="تعداد کدهای تخفیف"
+                android:textColor="#474747"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_close"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="24dp"
+            android:id="@+id/layout_amount"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_determination_amount_Guest" >
+
+            <TextView
+                android:fontFamily="@font/iransans"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:gravity="end"
+                android:text="تعداد"
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <RelativeLayout
+                android:background="@drawable/max_min_layout_background"
+                android:layout_width="106dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_minus"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/iv_min_amount"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:fontFamily="@font/iransans"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_count_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    />
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginRight="6dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/iv_max_amount"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+ <RelativeLayout
+
+     android:layout_marginTop="18dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+     <TextView
+         android:fontFamily="@font/iransans"
+         android:layout_centerVertical="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+         android:textStyle="normal"
+         android:textSize="12sp"
+         android:textColor="#474747"
+         android:lineSpacingExtra="10sp"
+         android:gravity="end"
+         android:text="قیمت هر کد"/>
+
+     <TextView
+         android:fontFamily="@font/iransans"
+         android:layout_centerVertical="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:textStyle="normal"
+         android:textSize="13sp"
+         android:textColor="#474747"
+         android:lineSpacingExtra="9sp"
+         android:text="۱۰۰،۰۰۰ تومان"/>
+ </RelativeLayout>
+        <RelativeLayout
+
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="@font/iransans"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="10sp"
+                android:gravity="end"
+                android:text="مبلغ قابل پرداخت"/>
+
+            <TextView
+                android:fontFamily="@font/iransans"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="۱۰۰،۰۰۰ تومان"/>
+        </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:fontFamily="@font/iransans"
+            app:iconGravity="textEnd"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/topaz"
+            android:id="@+id/btn_register_discount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="پرداخت ۱۰۰،۰۰۰ تومان"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="@dimen/margin_normal"
+
+            >
+
+
+            <!--     <TextView
+                     android:id="@+id/tv_add_user"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:lineSpacingExtra="10sp"
+                     android:text="@string/passenger_add_user"
+                     android:textColor="@color/white"
+                     android:textSize="14sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <ImageView
+                     android:src="@drawable/ic_add_user"
+                     android:id="@+id/iv_add_user"
+                     android:layout_width="@dimen/image_size"
+                     android:layout_height="@dimen/image_size"
+                     android:layout_marginStart="8dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintStart_toEndOf="@+id/tv_add_user"
+                     app:layout_constraintTop_toTopOf="parent" />-->
+        </com.google.android.material.button.MaterialButton>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_kooKrook" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

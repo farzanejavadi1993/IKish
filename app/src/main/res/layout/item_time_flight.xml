@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="flightTime"
+            type="ikish.aftab.ws.android.model.FlightTimeModel" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        app:strokeColor="@color/invalid_name_color"
+        android:id="@+id/cardMainTime"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="4dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/pale_gray"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+
+            android:layout_width="90dp"
+            android:layout_height="56dp">
+            <TextView
+                android:id="@+id/tv_name_day_of_week"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:text="@{flightTime.dayWeek}"
+                android:lineSpacingExtra="10sp"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="10sp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_number_day_of_mounth"
+                android:layout_marginRight="8dp"
+                android:text="@{flightTime.numberMounth}"
+                android:layout_below="@+id/tv_name_day_of_week"
+                android:textStyle="bold"
+                android:lineSpacingExtra="16sp"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="18sp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_toLeftOf="@+id/tv_number_day_of_mounth"
+                android:id="@+id/tv_name_day_of_mounth"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="8dp"
+                android:text="@{flightTime.NAMEMounth}"
+                android:layout_below="@+id/tv_name_day_of_week"
+                android:lineSpacingExtra="10sp"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="10sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

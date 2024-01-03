@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+
+            android:id="@+id/action_go_to_home_fragment"
+            app:destination="@id/homeFragment" />
+        <action
+
+            android:id="@+id/action_go_to_confirm_fragment"
+            app:destination="@id/confirmCodeFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmCodeFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.login.ConfirmCodeFragment"
+        android:label="fragment_confirm_code"
+        tools:layout="@layout/fragment_confirm_code">
+        <argument
+            android:name="phoneNumber"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="code"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_home_fragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+
+        android:id="@+id/homeFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.homeFragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_go_to_service_fragment"
+            app:destination="@id/serviceFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_go_to_profile_fragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/serviceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.homeFragment.ServicesFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service">
+        <action
+            android:id="@+id/action_go_to_home_fragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/serviceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_go_to_profile_fragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/serviceFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_go_to_airPlane_fragment"
+            app:destination="@id/airPlaneFragment"
+          />
+        <action
+            android:id="@+id/action_go_to_calendar_fragment"
+            app:destination="@id/calendarFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_car_violet_fragment"
+            app:destination="@id/carViolationFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_event_fragment"
+            app:destination="@id/eventFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_map_fragment"
+            app:destination="@id/mapFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_pay_bills_fragment"
+            app:destination="@id/payBillsFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_hot_discount_fragment"
+            app:destination="@id/hotDiscountFragment"
+            />
+    </fragment>
+
+
+    <fragment
+
+        android:id="@+id/eventFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event">
+
+
+    </fragment>
+
+
+    <fragment
+
+        android:id="@+id/hotDiscountFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.hotDiscount.HotDiscountFragment"
+        android:label="fragment_hot_discount"
+        tools:layout="@layout/fragment_hot_discount">
+
+        <action
+            android:id="@+id/action_go_to_detail_hot_discount_fragment"
+            app:destination="@id/detailHotDiscountFragment"
+            />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/detailHotDiscountFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.hotDiscount.DetailHotDiscountFragment"
+        android:label="fragment_detail_hot_discount"
+        tools:layout="@layout/fragment_detail_hot_discount">
+        <action
+            android:id="@+id/action_go_to_detail_hot_discount_fragment"
+            app:destination="@id/detailHotDiscountFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_about_residence_fragment"
+            app:destination="@id/aboutResidenceFragment"
+            />
+
+    </fragment>
+    <fragment
+
+        android:id="@+id/payBillsFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.bill.PayBillsFragment"
+        android:label="fragment_pay_bills"
+        tools:layout="@layout/fragment_pay_bills">
+
+        <action
+            android:id="@+id/action_go_to_detail_pay_bills_fragment"
+            app:destination="@id/detailPayBillsFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_history_bills_fragment"
+            app:destination="@id/historyBillFragment"
+            />
+    </fragment>
+    <fragment
+
+        android:id="@+id/historyBillFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.bill.BillHistoryFragment"
+        android:label="fragment_bill_history"
+        tools:layout="@layout/fragment_history_bills">
+
+        <action
+            android:id="@+id/action_go_to_detail_pay_bills_fragment"
+            app:destination="@id/detailPayBillsFragment"
+            />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/detailPayBillsFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.bill.DetailPayBillsFragment"
+        android:label="fragment_detail_pay_bills"
+        tools:layout="@layout/fragment_detail_pay_bills">
+
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/airPlaneFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.AirPlaneFragment"
+        android:label="fragment_airPlane"
+        tools:layout="@layout/fragment_air_plane">
+        <action
+            android:id="@+id/action_go_to_calendar_fragment"
+            app:destination="@id/calendarFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_flight_fragment"
+            app:destination="@id/flightFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_search_location_fragment"
+            app:destination="@id/searchLocationFragment"
+            />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/calendarFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar">
+        <argument
+            android:name="mode"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="flag"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_room_selection_fragment"
+            app:destination="@id/roomSelectionFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_residence_fragment"
+            app:destination="@id/residenceFragment"
+            />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/residenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.ResidanceFragment"
+        android:label="fragment_residence"
+        tools:layout="@layout/fragment_residence">
+        <argument
+            android:name="day"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_map_fragment"
+            app:destination="@id/mapFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_detail_residence_fragment"
+            app:destination="@id/detailResidenceFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_filter_residence_fragment"
+            app:destination="@id/filterResidenceFragment"
+            />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/mapFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map">
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/filterResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.FilterResidenceFragment"
+        android:label="fragment_filter_residence"
+        tools:layout="@layout/fragment_filter_residence">
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/detailResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.DetailResidenceFragment"
+        tools:layout="@layout/fragment_detail_residence">
+        <argument
+            android:name="iIMG"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="iID"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="day"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_go_to_payment_residence_fragment"
+            app:destination="@id/paymentResidenceFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_about_residence_fragment"
+            app:destination="@id/aboutResidenceFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_detail_residence_fragment"
+            app:destination="@id/detailResidenceFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_map_fragment"
+            app:destination="@id/mapFragment"
+            />
+
+
+
+    </fragment>
+
+
+    <fragment
+
+        android:id="@+id/aboutResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.AboutResidenceFragment"
+        android:label="fragment_about_residence"
+        tools:layout="@layout/about_residence">
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+
+
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/paymentResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.PaymentResidenceFragment"
+        android:label="fragment_payment_residence"
+        tools:layout="@layout/fragment_payment_residence">
+        <argument
+            android:name="img"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="id"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="readonly"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_go_to_passenger_list_fragment"
+            app:destination="@id/passengerListFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_calendar_fragment"
+            app:destination="@id/calendarFragment"
+            />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/roomSelectionFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.residence.RoomSelectionFragment"
+        android:label="fragment_room_selection"
+        tools:layout="@layout/fragment_room_selection">
+        <argument
+            android:name="day"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_residence_fragment"
+            app:destination="@id/residenceFragment"
+            />
+    </fragment>
+    <fragment
+
+        android:id="@+id/flightFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.FlightsFragment"
+        android:label="fragment_flight"
+        tools:layout="@layout/fragment_flights">
+        <action
+            android:id="@+id/action_go_to_detail_flight_fragment"
+            app:destination="@id/detailFlightFragment"
+            />
+
+
+    </fragment>
+    <fragment
+
+        android:id="@+id/detailFlightFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.DetailFlightFragment"
+        android:label="fragment_detail_flight"
+        tools:layout="@layout/fragment_detail_flight">
+
+        <argument
+            android:name="n"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_passengerList_fragment"
+            app:destination="@id/passengerListFragment"
+            />
+        <action
+            app:popUpTo="@id/detailFlightFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_go_to_orderDetail_fragment"
+            app:destination="@id/orderDetailFragment"
+            />
+
+    </fragment>
+    <fragment
+
+        android:id="@+id/passengerListFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.passenger.PassengerListFragment"
+        android:label="fragment_passenger_list"
+        tools:layout="@layout/fragment_list_passenger">
+        <argument
+            android:name="flag"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_go_to_new_passenger_fragment"
+            app:destination="@id/newPassengerFragment"
+            />
+
+    </fragment>
+
+
+    <fragment
+
+        android:id="@+id/newPassengerFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.passenger.NewPassengerFragment"
+        android:label="fragment_new_passenger"
+        tools:layout="@layout/fragment_new_passenger">
+
+        <argument
+            android:name="icd"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/orderDetailFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.OrderDetailFragment"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail">
+
+        <argument
+            android:name="n"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_go_to_extradition_fragment"
+            app:destination="@id/extraditionFragment"
+            />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/extraditionFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.ExtraditionFragment"
+        android:label="fragment_extradition"
+        tools:layout="@layout/fragment_extradition">
+        <argument
+            android:name="n"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/carViolationFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.violationCar.CarViolationFragment"
+        android:label="fragment_car_violet"
+        tools:layout="@layout/fragment_car_violation">
+        <action
+            android:id="@+id/action_go_to_check_violet_result_fragment"
+            app:destination="@id/checkVioleResultFragment"
+            />
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/checkVioleResultFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.violationCar.CheckVioletResultFragment"
+        android:label="fragment_check_violet_result"
+        tools:layout="@layout/fragment_check_violet_result">
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/searchLocationFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.ticketAirPlaneService.SearchLocationFragment"
+        android:label="fragment_search_location"
+        tools:layout="@layout/fragment_search_location">
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.homeFragment.ProfileFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_go_to_home_fragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_go_to_service_fragment"
+            app:destination="@id/serviceFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_go_to_passenger_list_fragment"
+            app:destination="@id/passengerListFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_Credit_fragment"
+            app:destination="@id/creditFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_about_fragment"
+            app:destination="@id/aboutResidenceFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_question_fragment"
+            app:destination="@id/questionFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_myTicket_airplane_fragment"
+            app:destination="@id/myTicketAirPlane"
+            />
+        <action
+            android:id="@+id/action_go_to_tab_fragment"
+            app:destination="@id/tabFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_edit_profile_fragment"
+            app:destination="@id/editProfileFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_go_to_login_fragment"
+            app:destination="@id/loginFragment"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/creditFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.credit.CreditFragment"
+        android:label="fragment_credit"
+        tools:layout="@layout/fragment_credit">
+        <action
+            android:id="@+id/action_go_to_increase_credit_fragment"
+            app:destination="@id/increaseCreditFragment"
+
+            />
+        <action
+            android:id="@+id/action_go_to_about_residence_fragment"
+            app:destination="@id/aboutResidenceFragment"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/myTicketAirPlane"
+        android:name="ikish.aftab.ws.android.ui.fragments.MyTicketAirPlaneFragment"
+        android:label="fragment_my_ticket_airplane"
+        tools:layout="@layout/fragment_my_ticket_air_plane">
+        <action
+            android:id="@+id/action_go_to_detail_order_fragment"
+            app:destination="@id/orderDetailFragment"
+
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/increaseCreditFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.credit.IncreaseCreditFragment"
+        android:label="fragment_increase_credit_fragment"
+        tools:layout="@layout/fragment_increase_credit">
+
+
+    </fragment>
+
+
+
+<!--    <activity-->
+
+<!--        android:id="@+id/tabActivity"-->
+<!--        android:name="ikish.aftab.ws.android.Activities.TabActivity"-->
+<!--        android:label="tab_activity"-->
+<!--        tools:layout="@layout/activity_tab">-->
+<!--        <argument-->
+<!--            android:name="type"-->
+<!--            android:defaultValue=""-->
+<!--            app:argType="string" />-->
+
+
+
+
+<!--    </activity>-->
+
+
+    <fragment
+
+        android:id="@+id/tabFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.TabFragment"
+        android:label="tab_fragment"
+        tools:layout="@layout/fragment_tab">
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+
+
+        <action
+
+            android:id="@+id/action_go_to_payment_fragment"
+            app:destination="@id/paymentResidenceFragment"
+            />
+
+        <action
+
+            android:id="@+id/action_go_to_type_place_residence_fragment"
+            app:destination="@id/typePlaceResidenceFrament"
+            />
+        <action
+
+            android:id="@+id/action_go_to_about_residence_fragment"
+            app:destination="@id/aboutResidenceFragment"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/typePlaceResidenceFrament"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.TypePlaceResidenceFragment"
+        android:label="type_place_residence_fragment"
+        tools:layout="@layout/fragment_type_place_residence">
+        <action
+
+            android:id="@+id/action_go_to_search_brand_fragment"
+            app:destination="@id/searchBrandFragment"
+            />
+        <action
+
+            android:id="@+id/action_go_to_possibility_car_fragment"
+            app:destination="@id/possibilityCarFragment"
+            />
+        <action
+            android:id="@+id/action_go_to_possibility_residence_fragment"
+            app:destination="@id/possibilityResidenceFragment"
+            />
+
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/possibilityCarFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myCar.PossibilityCarFragment"
+        android:label="type_place_residence_fragment"
+        tools:layout="@layout/fragment_type_place_residence">
+
+
+
+        <action
+            android:id="@+id/action_go_to_add_photo_residence_fragment"
+            app:destination="@id/addPhotoResidenceFragment"
+            />
+
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchBrandFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myCar.SearchBrandFragment"
+        android:label="search_brand_fragment"
+        tools:layout="@layout/fragment_search_brand">
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/possibilityResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.PossiblyResidenceFragment"
+        android:label="possibility_residence_fragment"
+        tools:layout="@layout/fragment_possibility_residence">
+
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+
+        <action
+            android:id="@+id/action_go_to_area_residence_fragment"
+            app:destination="@id/areaResidenceFragment"
+            />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/areaResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.AreaResidenceFragment"
+        android:label="area_residence_fragment"
+        tools:layout="@layout/fragment_area_residence">
+
+        <action
+            android:id="@+id/action_go_to_toilets_residence_fragment"
+            app:destination="@id/toiletsResidenceFragment"
+            />
+
+
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/toiletsResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.ToiletsResidenceFragment"
+        android:label="toilets_residence_fragment"
+        tools:layout="@layout/fragment_toilets_residence">
+
+        <action
+            android:id="@+id/action_go_to_location_residence_fragment"
+            app:destination="@id/locationResidenceFragment"
+            />
+
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/locationResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.LocationResidenceFragment"
+        android:label="location_residence_fragment"
+        tools:layout="@layout/fragment_location_residence">
+
+        <action
+            android:id="@+id/action_go_to_add_photo_residence_fragment"
+            app:destination="@id/addPhotoResidenceFragment"
+            />
+
+        <action
+            android:id="@+id/action_go_to_map_fragment"
+            app:destination="@id/mapFragment"
+            />
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addPhotoResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.AddPhotoResidenceFragment"
+        android:label="add_photo_residence_fragment"
+        tools:layout="@layout/fragment_add_photo_residence">
+
+        <action
+            android:id="@+id/action_go_to_rule_residence_fragment"
+            app:destination="@id/ruleResidenceFragment"
+            />
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ruleResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.RuleResidenceFragment"
+        android:label="rule_residence_fragment"
+        tools:layout="@layout/fragment_rule_residence">
+
+        <action
+            android:id="@+id/action_go_to_list_price_residence_fragment"
+            app:destination="@id/listPriceResidence"
+            />
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPriceResidence"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.ListPriceResidenceFragment"
+        android:label="list_price_residence_fragment"
+        tools:layout="@layout/fragment_list_price_residence">
+
+        <action
+            android:id="@+id/action_go_to_discount_residence_fragment"
+            app:destination="@id/discountResidenceFragment"
+            />
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/discountResidenceFragment"
+        android:name="ikish.aftab.ws.android.ui.fragments.myResidence.DiscountResidenceFragment"
+        android:label="discount_residence_fragment"
+        tools:layout="@layout/fragment_discount_residence">
+        <argument
+            android:name="iD"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_go_to_calendar_fragment"
+            app:destination="@id/calendarFragment"
+            />
+    </fragment>
+
+
+</navigation>

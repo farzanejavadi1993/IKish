@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="question"
+            type="ikish.aftab.ws.android.model.QuestionModel" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/btnQuestion"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+          >
+
+            <TextView
+                android:layout_marginEnd="22dp"
+                android:id="@+id/question_item_tv_title"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="19dp"
+                android:text="@{question.title}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_marginStart="22dp"
+                android:id="@+id/question_item_btn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_fi_rr_caret_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<TextView
+    android:gravity="right"
+    android:visibility="gone"
+    android:layout_below="@+id/button12"
+    android:layout_alignParentRight="true"
+    android:id="@+id/question_tv_description"
+    style="@style/H5Right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="7dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginStart="22dp"
+    android:text="@{question.description}"/>
+
+        <View
+            android:background="#dddddd"
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_below="@id/question_tv_description"/>
+
+  />
+
+    </RelativeLayout>
+</layout>

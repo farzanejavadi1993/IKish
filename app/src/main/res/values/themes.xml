@@ -1,0 +1,173 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Ikish" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pale_gray</item>
+        <item name="colorPrimaryDark">@color/pale_gray</item>
+
+        <!--<item name="colorOnPrimary">@color/white</item>-->
+        <!-- Secondary brand color. -->
+<!--        <item name="colorSecondary">@color/topaz</item>-->
+        <!--<item name="colorSecondaryVariant">@color/topaz</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+        <item name="colorAccent">@color/topaz</item>
+        <item name="android:textViewStyle">@style/FontForWholeApp</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+
+     <!--   <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/Widget.App.SnackbarButton</item>-->
+
+        <item name="snackbarStyle">@style/MySnackbar</item>
+        <!-- Status bar color. -->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+        <!-- Customize your theme here. -->
+    </style>
+
+
+  <!--  <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+        <item name="actionTextColorAlpha">1</item>
+    </style>
+
+    <style name="Widget.App.SnackbarButton" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/topaz</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorPrimary">@color/medium_color</item>
+        <item name="colorOnSurface">@color/medium_color</item>
+    </style>-->
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/iransans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MySnackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:layout_margin">32dp</item>
+    </style>
+
+    <style name="H3Right">
+        <item name="android:gravity">end</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">16sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+
+    <style name="H7Right">
+        <item name="android:gravity">end</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+
+
+    <style name="H4LeftNormal">
+
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:textColor">@color/medium_color</item>
+    </style>
+    <style name="H4Left">
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+
+    <style name="H6Right">
+        <item name="android:gravity">end</item>
+
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+
+
+    <style name="H5Right">
+        <item name="android:gravity">end</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+    <style name="H8Left">
+
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">#474747</item>
+    </style>
+
+
+
+
+    <style parent="android:Widget.TextView" name="FontForWholeApp">
+
+        <item name="android:fontFamily">@font/iransans</item>
+
+    </style>
+
+
+    <style name="DefaultNumberPickerTheme" parent="Theme.Ikish">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/iransans</item>
+
+    </style>
+
+    <style name="WeekDayTitleStyle">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:textSize">@dimen/text_size_week</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:textColor">@color/weekDayNameColor</item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/dayOfMonthPaddingBottom</item>
+    </style>
+
+    <style name="ContainerDayOfWeek">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="StripRange">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/background</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+
+    <style name="customRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ic_star</item>
+        <item name="android:indeterminateDrawable">@drawable/ic_star</item>
+    </style>
+
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <item name="colorPrimaryDark">@color/white</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="android:windowIsFloating">false</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rect_top_rounded</item>
+    </style>
+
+
+
+</resources>

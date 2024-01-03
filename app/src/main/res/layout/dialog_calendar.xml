@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="316dp"
+        android:background="@color/white"
+        android:layout_height="316dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button"
+                android:layout_width="284dp"
+                app:cardCornerRadius="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/pale_gray"
+                app:displayMonthNames="true"
+                android:layout_height="167dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_date_birthday">
+                <ikish.aftab.ws.android.classes.PersianDatePicker
+                    android:layout_width="match_parent"
+                    android:id="@+id/persian_date_calendar"
+                    app:displayMonthNames="true"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+
+                style="@style/H5Right"
+                android:id="@+id/tv_choose_date_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/choose_date_birthday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" >
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="10dp"
+                    android:fontFamily="@font/iransans"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:lineSpacingExtra="10sp"
+                    android:textAlignment="center"
+                    android:id="@+id/btn_confirmation"
+                    android:layout_width="132dp"
+                    android:layout_height="45dp"
+                    android:text="@string/confirm"
+                    app:backgroundTint="@color/topaz"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    app:cornerRadius="10dp"
+                    android:textSize="14sp"
+                    app:strokeWidth="1dp"
+                    android:fontFamily="@font/iransans"
+                    app:strokeColor="@color/topaz"
+                    android:textColor="@color/topaz"
+                    android:lineSpacingExtra="10sp"
+                    android:textAlignment="center"
+                    app:backgroundTint="@color/white"
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="132dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_confirmation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

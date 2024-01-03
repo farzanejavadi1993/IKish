@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.shawnlin.numberpicker.NumberPicker
+            app:np_wheelItemCount="5"
+            app:np_value="70"
+            android:layout_weight="0.33"
+            android:theme="@style/DefaultNumberPickerTheme"
+            android:showDividers="none"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+            app:np_selectedTextColor="#474747"
+            app:np_selectedTextSize="14sp"
+            app:np_textColor="#8a8a8a"
+            app:np_textSize="12sp"
+            android:id="@+id/yearNumberPicker"
+            />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            app:np_wheelItemCount="5"
+            android:layout_weight="0.33"
+            app:np_value="12"
+            android:theme="@style/DefaultNumberPickerTheme"
+            android:showDividers="none"
+            android:id="@+id/monthNumberPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+
+            app:np_selectedTextColor="#474747"
+            app:np_selectedTextSize="14sp"
+            app:np_textColor="#8a8a8a"
+            app:np_textSize="12sp"
+            />
+
+        <com.shawnlin.numberpicker.NumberPicker
+            app:np_wheelItemCount="5"
+            app:np_value="31"
+            android:layout_weight="0.33"
+            android:theme="@style/DefaultNumberPickerTheme"
+            android:showDividers="none"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:np_dividerColor="@android:color/transparent"
+
+            app:np_selectedTextColor="#474747"
+            app:np_selectedTextSize="14sp"
+            app:np_textColor="#8a8a8a"
+            app:np_textSize="12sp"
+
+            android:id="@+id/dayNumberPicker"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+</LinearLayout>

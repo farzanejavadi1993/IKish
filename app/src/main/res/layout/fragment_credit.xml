@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/pale_gray"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/H3Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_back_frament"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/button6"
+            app:cardCornerRadius="20dp"
+            android:layout_width="0dp"
+            android:backgroundTint="@color/pale_gray"
+            android:layout_height="172dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="22dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/card_credit"
+                android:background="@drawable/ic_etebar_card_disable"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+
+                    app:cardCornerRadius="14dp"
+                    android:id="@+id/add_credit"
+                    android:layout_width="103dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/medium_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:tint="@color/white"
+                            app:tintMode="add"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/iv_add_cridit"
+                            android:layout_marginRight="11dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_plus"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            tools:ignore="UseAppTint" />
+                        <TextView
+                            android:layout_marginRight="6dp"
+                            android:layout_toLeftOf="@+id/iv_add_cridit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:lineSpacingExtra="10sp"
+                            android:gravity="end"
+                            android:layout_centerVertical="true"
+                            android:text="@string/add_credit"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_credit_blance"
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="101dp"
+                    android:layout_marginEnd="22dp"
+                    android:text="@string/credit_balance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_credit_rial"
+                    style="@style/H3Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="۰ تومان"
+                    android:layout_marginEnd="22dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_credit_blance" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+
+            android:src="@drawable/ic_not_found"
+            android:id="@+id/iv_not_found"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="57dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+        <TextView
+
+            android:id="@+id/tv_not_found"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="@color/invalid_name_color"
+            android:lineSpacingExtra="10sp"
+            android:gravity="center_horizontal"
+            android:text="@string/not_found_credit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_not_found" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:textColor="@color/invalid_name_color"
+            android:lineSpacingExtra="9sp"
+            android:gravity="center_horizontal"
+            android:text="@string/not_found_credit_description"
+            android:id="@+id/tv_not_found_description"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_not_found" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/btn_see_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6">
+
+            <TextView
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/recently_transaction"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:lineSpacingExtra="9sp"
+                android:textColor="@color/topaz"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                android:text="مشاهده همه" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler_transaction"
+            android:layout_width="0dp"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_transaction"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_see_all" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

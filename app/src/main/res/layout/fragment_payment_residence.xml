@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pale_gray"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:layout_marginBottom="3dp">
+
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="16dp"
+                android:text="@string/payment_and_ok"
+                android:textColor="@color/medium_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp"
+                    android:layout_marginLeft="22dp"
+
+                    android:layout_marginRight="22dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/iv_residence_final"
+                        android:layout_width="116dp"
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.github.siyamed.shapeimageview.RoundedImageView
+                            android:id="@+id/iv_residence"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+   />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tv_name_residence_final"
+                        style="@style/H4Left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="اقامتگاه ساحلی"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_residence_final"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_residence_final"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_residence_final">
+
+                        <TextView
+                            android:id="@+id/tv_number_of_passenger_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="10sp"
+                            android:text="4.5"
+                            android:textColor="#474747"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/view_comment"
+                            android:layout_width="1dp"
+                            android:layout_height="12dp"
+                            android:layout_marginEnd="7dp"
+                            android:background="@color/very_light_pink"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_number_of_passenger_comment"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_rate_comment"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="7dp"
+                            android:lineSpacingExtra="9sp"
+                            android:text="12 نفر"
+                            android:textColor="#474747"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/view_comment"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/ic_star"
+                        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_residence_final" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:id="@+id/cardCalendar"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/pale_gray"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="#e3e3e3"
+                    app:strokeWidth="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp">
+
+                        <ImageView
+                            android:id="@+id/iv_calendar_final"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="12dp"
+                            android:layout_toLeftOf="@+id/iv_calendar_final"
+                            android:text="۱۲ مهر - ۱۵ مهر" />
+
+                        <TextView
+                            android:id="@+id/tv_edit_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:lineSpacingExtra="9sp"
+                            android:text="@string/edit_date"
+                            android:textColor="@color/topaz"
+                            android:textSize="11sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/pale_gray"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="#e3e3e3"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/superviser_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/iv_superviser"
+                                android:layout_width="@dimen/image_size"
+                                android:layout_height="@dimen/image_size"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_user" />
+
+                            <TextView
+                                android:id="@+id/tv_superViser"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="12dp"
+                                android:layout_toLeftOf="@+id/iv_superviser"
+                                android:text="@string/superviser" />
+
+                            <TextView
+                                android:id="@+id/tv_add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+
+                                android:lineSpacingExtra="9sp"
+                                android:text="@string/add"
+                                android:textColor="@color/topaz"
+                                android:textSize="11sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:id="@+id/iv_add"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_toRightOf="@+id/tv_add"
+                                android:src="@drawable/ic_plus" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_superviser"
+
+                            android:layout_marginRight="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_add"
+                         />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:id="@+id/card_consideration"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/pale_gray"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="#e3e3e3"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_considerations"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/iv_travel_considerations"
+                                android:layout_width="@dimen/image_size"
+                                android:layout_height="@dimen/image_size"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_user" />
+
+                            <TextView
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="12dp"
+                                android:layout_toLeftOf="@+id/iv_travel_considerations"
+                                android:text="@string/travel_considerations" />
+
+                            <TextView
+                                android:id="@+id/tv_add_travel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:lineSpacingExtra="9sp"
+                                android:text="@string/add"
+                                android:textColor="@color/topaz"
+                                android:textSize="11sp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:id="@+id/iv_add_travel"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_toRightOf="@+id/tv_add_travel"
+                                android:src="@drawable/ic_plus" />
+                        </RelativeLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card_considerations"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginRight="22dp"
+                            android:backgroundTint="#e6e5ee"
+
+                            android:visibility="gone"
+                            app:cardCornerRadius="10dp"
+                            app:strokeColor="#dfdfdf"
+                            app:strokeWidth="1dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <EditText
+                                    android:id="@+id/edt_considerations"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="15dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:fontFamily="@font/iransans"
+                                    android:gravity="right"
+                                    android:hint="مثلا: درخواست‌هایی مانند انتقال شما از فرودگاه به اقامتگاه، و یا اگر مشکل خاصی دارید اینجا بنویسید."
+                                    android:lineSpacingExtra="9sp"
+                                    android:textColor="@color/invalid_name_color"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/pale_gray"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="#e3e3e3"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_detail_factor"
+                            style="@style/H5Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/detail_factor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+
+                            android:id="@+id/tv_price_factor"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="22dp"
+                            android:text="@string/price_factor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_detail_factor" />
+
+                        <TextView
+
+                            android:id="@+id/tv_price_factor_final"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="10sp"
+                            android:text=" ۶۸۰،۰۰۰ تومان"
+                            android:textColor="@color/medium_color"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_price_factor"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_price_factor" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:text="@string/discont_factor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_price_factor" />
+
+                        <TextView
+                            android:id="@+id/tv_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="10sp"
+                            android:text="۸۰،۰۰۰ تومان"
+                            android:textColor="#474747"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+                        <TextView
+
+                            android:id="@+id/tv_sum_price"
+                            style="@style/H5Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:lineSpacingExtra="9sp"
+                            android:text="مبلغ قابل پرداخت"
+                            android:textColor="#474747"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="250,000 تومان"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_sum_price"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tv_sum_price" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/card_radius_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reserve"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:backgroundTint="@color/topaz"
+                android:fontFamily="@font/iransans"
+                android:lineSpacingExtra="10sp"
+
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>

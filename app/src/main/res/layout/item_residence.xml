@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="Residence"
+            type="ikish.aftab.ws.android.db.Residence" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="22dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_iv_residence"
+            android:layout_width="0dp"
+            android:layout_height="191dp"
+            android:backgroundTint="@color/pale_gray"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/iv_item"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/H4Left"
+            android:id="@+id/tv_title_item_residence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="22dp"
+            android:text="@{Residence.NM}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_iv_residence" />
+
+        <TextView
+            style="@style/H8Left"
+            android:id="@+id/price_item_residence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="22dp"
+            android:text="@string/price_every_day"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_item_residence" />
+
+        <TextView
+            android:id="@+id/tv_price__residence_item"
+            style="@style/H5Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:text="@{Residence.PR}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_item_residence" />
+
+        <ImageView
+
+            android:id="@+id/img_star"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price__residence_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_item_residence" />
+
+        <TextView
+            android:text="@{Residence.RAT}"
+            android:id="@+id/tv_rate_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="#474747"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/img_star"
+            app:layout_constraintStart_toEndOf="@+id/img_star"
+            app:layout_constraintTop_toTopOf="@+id/img_star"
+           />
+
+        <TextView
+
+            android:textStyle="normal"
+            android:textSize="11sp"
+            android:textColor="#474747"
+            android:lineSpacingExtra="9sp"
+            android:id="@+id/tv_count_passenger_item_residence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{Residence.NOP}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rate_item"
+            app:layout_constraintStart_toEndOf="@+id/tv_rate_item"
+            app:layout_constraintTop_toTopOf="@+id/tv_rate_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

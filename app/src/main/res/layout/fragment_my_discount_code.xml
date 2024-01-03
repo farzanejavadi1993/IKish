@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout
+    android:rotationY="180"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@color/pale_gray"
+        app:cardCornerRadius="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#e3e3e3"
+        android:id="@+id/card_discount"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/card_discount1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/H5Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H23SSA"
+        android:id="@+id/tv_discount_code"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date_discount"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        style="@style/H5Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="۱۴۰۰/۰۲/۰۱"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_discount_code" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="13sp"
+        android:textColor="#474747"
+        android:lineSpacingExtra="9sp"
+        android:text="خرید از مال ستاره"
+        android:id="@+id/tv_name_store_discount"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="9dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:background="@drawable/item_passenger_radus"
+        android:gravity="center"
+
+        android:id="@+id/tv_credit"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="12dp"
+        android:text="قابل استفاده"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount" />
+
+    <ImageView
+        android:id="@+id/textView9"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="16dp"
+      android:src="@drawable/ic_fi_rr_angle_small_left"
+        app:layout_constraintBottom_toTopOf="@+id/tv_credit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="30dp"
+        android:gravity="right"
+        style="@style/H5Right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="کدهای تخفیف استفاده شده"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/pale_gray"
+        android:layout_marginTop="14dp"
+        app:cardCornerRadius="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#e3e3e3"
+        android:id="@+id/card_discount11"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H23bbA"
+                android:id="@+id/tv_discount_code1"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date_discount1"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="16dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1399/12/13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_discount_code1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="خرید از فروشگاه رفاه"
+                android:id="@+id/tv_name_store_discount1"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="9dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:background="@drawable/item_passenger_radus"
+                android:gravity="center"
+
+                android:id="@+id/tv_credit1"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:text="استفاده شده"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount1" />
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_fi_rr_angle_small_left"
+                app:layout_constraintBottom_toTopOf="@+id/tv_credit1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@color/pale_gray"
+        app:cardCornerRadius="12dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#e3e3e3"
+        android:id="@+id/card_discount111"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H45bbA"
+                android:id="@+id/tv_discount_code11"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date_discount11"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="16dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1399/9/23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_discount_code11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="خرید از فروشگاه دلفین"
+                android:id="@+id/tv_name_store_discount11"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="9dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:background="@drawable/item_passenger_radus"
+                android:gravity="center"
+
+                android:id="@+id/tv_credit11"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:text="استفاده شده"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount11" />
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_fi_rr_angle_small_left"
+                app:layout_constraintBottom_toTopOf="@+id/tv_credit11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_store_discount11" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+</layout>

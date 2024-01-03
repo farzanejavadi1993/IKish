@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+android:layout_marginBottom="56dp"
+        android:gravity="right"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+
+                />
+        </RelativeLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#474747"
+            android:lineSpacingExtra="16sp"
+            android:gravity="end"
+            android:text="مشخصات عمومی خودرو را مشخص کنید."
+            android:id="@+id/tv_nees_room"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+
+
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="14dp"
+            android:id="@+id/layout_capacity_passenger"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_determination_amount_Guest" >
+
+            <TextView
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:gravity="end"
+                android:text="ظرفیت سرنشین"
+                android:id="@+id/tv_capacity_passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <RelativeLayout
+                android:background="@drawable/max_min_layout_background"
+                android:layout_width="106dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_minus"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/iv_min_capacity_passenger"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_count_capacity_passenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    />
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginRight="6dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/iv_max_capacity_passenger"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="4dp"
+            android:id="@+id/layout_count_door_car"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_determination_amount_Guest" >
+
+            <TextView
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:gravity="end"
+                android:text="تعداد درهای خودرو"
+                android:id="@+id/tv_door_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <RelativeLayout
+                android:background="@drawable/max_min_layout_background"
+                android:layout_width="106dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_minus"
+                    android:layout_marginLeft="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/iv_min_door_car"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_count_door_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    />
+
+                <ImageView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginRight="6dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/iv_max_door_car"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textStyle="normal"
+            android:textSize="11sp"
+            android:id="@+id/tv_title_type"
+            android:textColor="#474747"
+            android:lineSpacingExtra="9sp"
+            android:gravity="right"
+            android:text="ظرفیت صندوق عقب"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/btn_capacity_trunk"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#e6e5ee"
+            app:strokeWidth="1dp"
+            app:strokeColor="#dfdfdf"
+            android:layout_height="48dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_capacity_trunk"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="normal"
+                    android:textSize="13sp"
+                    android:textColor="#8a8a8a"
+                    android:lineSpacingExtra="9sp"
+                    android:gravity="end"
+                    android:text="انتخاب کنید‌"
+                    />
+                <ImageView
+                    android:rotation="270"
+                    android:layout_marginLeft="16dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_fi_rr_angle_small_left"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"/>
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#8a8a8a"
+            android:lineSpacingExtra="10sp"
+            android:gravity="end"
+            android:text="ظرفیت صندوق عقب بر اساس لیتر محاسبه می‌شود."/>
+        <RelativeLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="10sp"
+                android:gravity="end"
+                android:text="جعبه دنده خودرو «دستی» است."/>
+            <CheckBox
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#474747"
+            android:lineSpacingExtra="16sp"
+            android:gravity="end"
+            android:text="خودرو از چه امکاناتی برخوردار است؟"
+            android:layout_marginTop="30dp"
+            android:id="@+id/tv_possibility_of_residence"
+            />
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/more_posibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:id="@+id/wifi1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_bluetooth" />
+
+                <TextView
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/wifi1"
+                    android:text="بلوتوث" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/iv_countertops1"
+                    android:text="شارژ usd" />
+
+                <ImageView
+                    android:id="@+id/iv_countertops1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_charj" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/iv_microwave1"
+                    android:text="ورودی AUX" />
+
+                <ImageView
+                    android:id="@+id/iv_microwave1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_musiconline" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="74dp">
+
+                <TextView
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/tv_television1"
+                    android:text="ورودی USB" />
+
+                <ImageView
+                    android:id="@+id/tv_television1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_iconfinder_usb_925801" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/card_radius_bottom"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_possibility_car"
+            android:layout_centerVertical="true"
+            android:layout_width="132dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/topaz"
+            android:fontFamily="@font/iransans"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/continue_add_residence"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</layout>

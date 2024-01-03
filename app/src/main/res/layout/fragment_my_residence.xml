@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:rotationY="180"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:background="@color/pale_gray"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_icon_empty"
+                android:layout_width="@dimen/passenger_icon_empty_page"
+                android:layout_height="@dimen/passenger_icon_empty_page"
+                android:layout_marginTop="@dimen/passenger_icon_empty_page_top_margin"
+                android:src="@drawable/ic_not_found"/>
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="@dimen/not_find_size"
+                android:lineSpacingExtra="10sp"
+                android:id="@+id/tv_not_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/not_find_top_margin"
+                android:text="@string/passenger_not_find"
+                />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/invalid_name_color"
+                android:lineSpacingExtra="9sp"
+                android:textSize="@dimen/not_find_description_size"
+                android:id="@+id/tv_not_find_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/not_find_description_left_right_margin"
+                android:layout_marginTop="@dimen/not_find_description_top_margin"
+                android:layout_marginEnd="@dimen/not_find_description_left_right_margin"
+                android:text="@string/my_residence_not_find_description_villa"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:fontFamily="@font/iransans"
+                app:iconGravity="textEnd"
+                app:iconSize="20dp"
+                app:icon="@drawable/ic_plus"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/topaz"
+                android:id="@+id/btn_add_residence"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/my_residence_add_btn"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+
+                >
+
+
+
+            </com.google.android.material.button.MaterialButton>
+
+           <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_my_residence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginBottom="22dp"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:id="@+id/btn_add_residence_mini"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/iransans"
+                android:text="افزودن اقامتگاه"
+                android:textColor="@color/topaz"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:cornerRadius="18dp"
+                app:iconTint="@color/topaz"
+                app:icon="@drawable/ic_plus"
+                app:iconGravity="textEnd"
+                app:iconSize="24dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

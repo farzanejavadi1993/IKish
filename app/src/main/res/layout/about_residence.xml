@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size">
+
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="16dp"
+                android:text="@string/about_residence"
+                android:textColor="@color/medium_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="right"
+                    android:id="@+id/tv_about"
+                    android:text="@string/about_residence_description_full"
+                    style="@style/H6Right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/posibility_layout"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifi"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_wifi"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/best_kitchen"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_countertops"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_microwave"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Audio_service"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_tv_24px"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wifi"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_wifi"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/best_kitchen"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_countertops"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/food"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_microwave"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Audio_service"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_tv_24px"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/posibility_layout_car"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="شارژی"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_charj"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="بلوتوث"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_bluetooth"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="موزیک آنلاین"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_musiconline"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="یو اس بی"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_iconfinder_usb_925801"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="شارژی"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_charj"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="بلوتوث"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_bluetooth"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="موزیک آنلاین"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_musiconline"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            style="@style/H6Right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="یو اس بی"
+                            />
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_iconfinder_usb_925801"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/roles_cancel_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#e3e3e3"
+                        android:layout_height="107dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="13dp"
+                                style="@style/H4Left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="٪۱۰ جریمه"
+                                />
+                            <TextView
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید…"
+                                />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#e3e3e3"
+                        android:layout_height="107dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="13dp"
+                                style="@style/H4Left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="٪۱۰ جریمه"
+                                />
+                            <TextView
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید…"
+                                />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#e3e3e3"
+                        android:layout_height="107dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="13dp"
+                                style="@style/H4Left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="٪۱۰ جریمه"
+                                />
+                            <TextView
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید…"
+                                />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#e3e3e3"
+                        android:layout_height="107dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="13dp"
+                                style="@style/H4Left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="٪۱۰ جریمه"
+                                />
+                            <TextView
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginTop="8dp"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید…"
+                                />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:id="@+id/roles_residence_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+
+
+                        <TextView
+                            android:layout_marginRight="18dp"
+                            style="@style/H6Right"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید…"/>
+                        <ImageView
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_fi_rr_check_black"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/comment_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginBottom="30dp"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+
+                            android:layout_marginTop="14dp"
+                            >
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profile_iv_user_comment"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:src="@drawable/profileimage"
+                                app:civ_border_width="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/user_comment"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:text="سمانه مهرانفر" />
+
+                            <RatingBar
+                                android:progressTint="@color/sun_yellow"
+                                android:rotation="180"
+                                android:rating="2"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_gravity="left"
+                                android:id="@+id/ratingBarComment"
+                                android:layoutDirection="ltr"
+                                android:isIndicator="true"
+                                android:stepSize="0.1"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:numStars="5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment"
+                                app:layout_constraintTop_toBottomOf="@+id/user_comment"/>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:gravity="right"
+                            android:layout_marginTop="10dp"
+                            style="@style/H6Right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="30dp"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+
+                            android:layout_marginTop="14dp"
+                            >
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profile_iv_user_comment1"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:src="@drawable/profileimage"
+                                app:civ_border_width="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/user_comment1"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment1"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:text="سمانه مهرانفر" />
+
+                            <RatingBar
+                                android:progressTint="@color/sun_yellow"
+                                android:rotation="180"
+                                android:rating="2"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_gravity="left"
+                                android:id="@+id/ratingBarComment1"
+                                android:layoutDirection="ltr"
+                                android:isIndicator="true"
+                                android:stepSize="0.1"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:numStars="5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment1"
+                                app:layout_constraintTop_toBottomOf="@+id/user_comment1"/>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:gravity="right"
+                            android:layout_marginTop="10dp"
+                            style="@style/H6Right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="30dp"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+
+                            android:layout_marginTop="14dp"
+                            >
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/profile_iv_user_comment2"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:src="@drawable/profileimage"
+                                app:civ_border_width="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/user_comment2"
+                                style="@style/H6Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment2"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:text="سمانه مهرانفر" />
+
+                            <RatingBar
+                                android:progressTint="@color/sun_yellow"
+                                android:rotation="180"
+                                android:rating="2"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_gravity="left"
+                                android:id="@+id/ratingBarComment2"
+                                android:layoutDirection="ltr"
+                                android:isIndicator="true"
+                                android:stepSize="0.1"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:numStars="5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment2"
+                                app:layout_constraintTop_toBottomOf="@+id/user_comment2"/>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:gravity="right"
+                            android:layout_marginTop="10dp"
+                            style="@style/H6Right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="gone"
+                    android:id="@+id/transaction_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+
+                        android:id="@+id/iv_not_found"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_marginTop="57dp"
+                        android:src="@drawable/ic_not_found"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+
+                        android:id="@+id/tv_not_found"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="@color/invalid_name_color"
+                        android:lineSpacingExtra="10sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/not_found_credit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_not_found" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="13sp"
+                        android:textColor="@color/invalid_name_color"
+                        android:lineSpacingExtra="9sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/not_found_credit_description"
+                        android:id="@+id/tv_not_found_description"
+                        android:layout_marginTop="6dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_not_found" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_transaction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="15dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_transaction" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</layout>

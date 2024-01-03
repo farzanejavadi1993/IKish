@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:background="@color/pale_gray"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:elevation="4dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/profile_card"
+                android:layout_marginRight="@dimen/profile_card_left_right_margin"
+                android:layout_marginLeft="@dimen/profile_card_left_right_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="22dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:background="@drawable/profile_base"
+                    android:id="@+id/profile_card_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/profile_card_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+
+                        android:id="@+id/profile_iv_user"
+                        android:layout_width="@dimen/profile_image_user_size"
+                        android:layout_height="@dimen/profile_image_user_size"
+                        android:layout_marginTop="@dimen/profile_image_user_top_margin"
+                        android:src="@drawable/ic_profile_"
+                        app:civ_border_color="@color/back_to_back"
+                        app:civ_border_width="5dp"
+                        app:civ_shadow_radius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/my_name_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/profile_name_user"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/profile_name_user_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profile_iv_user" />
+
+                    <TextView
+                        android:padding="2dp"
+                        android:background="@drawable/shape_profile_launcher"
+                        android:id="@+id/btn_edit_profile"
+                        android:layout_width="@dimen/profile_btn_see_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/profile_see"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/profile_btn_see_size"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/my_name_profile" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_credit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_card" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/etebar_min"
+                    android:id="@+id/profile_iv_credit"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_credit"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_credit"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_credit"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_credit" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_credit"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="مشاهد و افزایش اعتبار / جزئیات تراکنش‌ها"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_credit"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_credit"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_credit" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_buy_rent"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_credit" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:id="@+id/profile_iv_buy_rent"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    android:src="@drawable/kharid_va_ejareha_min"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profile_tv_title_buy_rent"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_buy_rent"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_buy_rent"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_buy_rent" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_buy_rent"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="تخفیف‌های خریداری شده / اجاره‌های صورت گرفته"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_buy_rent"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_buy_rent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_buy_rent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_layout_ticket_airplane"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_buy_rent" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/belit_min"
+                    android:id="@+id/profile_iv_ticket_airplane"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_ticket_airplane"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_ticket_airplane"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_ticket_airplane"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_ticket_airplane" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_ticket_airplane"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_ticket_airplane"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_ticket_airplane"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_ticket_airplane"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_ticket_airplane" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_passenger"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_layout_ticket_airplane" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/listemosaferin_min"
+                    android:id="@+id/profile_iv_passenger"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_passenger"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_passenger"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_passenger"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_passenger" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_passenger"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_passenger"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_passenger"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_passenger"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_passenger" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_event"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_passenger" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/elanat_min"
+                    android:id="@+id/profile_iv_event"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_event"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_event"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_event"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_event" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_event"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_event"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_event"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_event"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_event" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_question"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_event" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/soalatemotedavel_min"
+                    android:id="@+id/profile_iv_question"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/profile_tv_title_question"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_question"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_question"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_question" />
+
+                <TextView
+                    android:id="@+id/profile_tv_description_question"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_question"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_iv_question"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_question"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_question" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_rules"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_question" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/ghavanin_min"
+                    android:id="@+id/profile_iv_rules"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_rules"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_rules"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rules"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_rules" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_rules"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rules"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_rules" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_rent_villa"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_rules" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/ejarevila"
+                    android:id="@+id/profile_iv_rent_villa"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_rent_villa"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_rent_villa"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rent_villa"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_rent_villa" />
+
+                <TextView
+                    android:id="@+id/tv_description_rent_villa"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_rent_villa"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rent_villa"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_rent_villa" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:focusable="true"
+                android:id="@+id/profile_rl_rent_car"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/profile_layout_item_height"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_rent_villa" >
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                    android:src="@drawable/ejare_khodro"
+                    android:id="@+id/profile_iv_rent_car"
+                    android:layout_width="@dimen/profile_image_item_height"
+                    android:layout_height="@dimen/profile_image_item_height"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/profile_tv_title_rent_car"
+                    style="@style/H4Left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_title_rent_car"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rent_car"
+                    app:layout_constraintTop_toTopOf="@+id/profile_iv_rent_car" />
+
+                <TextView
+                    android:id="@+id/tv_description_rent_car"
+                    style="@style/H7Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/profile_description_rent_car"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_rent_car"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_tv_title_rent_car" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:id="@+id/layput"
+                android:layout_height="54dp"
+                android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_rl_rent_car" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginEnd="@dimen/profile_layout_item_left_right_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layput" >
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        android:background="@color/pale_gray"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/my_nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:defaultNavHost="true"
+
+            app:navGraph="@navigation/nav_host"/>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <com.akshay.library.CurveBottomBar
+                android:layoutDirection="rtl"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/curveBottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                app:menu="@menu/bottom_menu"
+                app:itemIconTint="@drawable/navigation_view_colored"
+                app:itemIconSize="24dp"
+                app:itemTextColor="@drawable/navigation_view_colored"
+                app:curveRadius="30dp"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.mikhaellopez.circularimageview.CircularImageView
+
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/launcher_iv_profile"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="@dimen/profile_image_user_top_margin"
+            android:src="@drawable/ic_profile_"
+            app:civ_border_color="@color/back_to_back"
+            app:civ_border_width="5dp"
+            app:civ_shadow_radius="10dp"
+            />
+        <View
+            android:layout_marginBottom="8dp"
+            android:id="@+id/view"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:layout_width="18dp"
+            android:layout_height="4dp"/>
+
+    </RelativeLayout>
+</layout>

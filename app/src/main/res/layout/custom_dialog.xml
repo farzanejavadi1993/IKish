@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="12sp"
+                android:gravity="center"
+                android:text="آیا میخواهید از حساب کاربری خود خارج شوید؟"
+                android:textColor="#2f2f2f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/layoutButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_message"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="15sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8sp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/white"
+                    android:text="خیر"
+                    android:textColor="@color/login_invalid_name_error_color"
+                    app:cornerRadius="15dp"
+                    app:strokeColor="@color/login_invalid_name_error_color"
+                    app:strokeWidth="1dp"
+                    tools:ignore="UnusedAttribute" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_ok"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="8sp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/white"
+                    android:text="بلی"
+                    android:textColor="@color/green_color"
+                    app:cornerRadius="15dp"
+                    app:strokeColor="@color/green_color"
+                    app:strokeWidth="1dp"
+                    tools:ignore="UnusedAttribute" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
+
+

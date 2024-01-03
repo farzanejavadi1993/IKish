@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="TypeRent"
+            type="ikish.aftab.ws.android.model.TypeRentModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/card_brand"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22dp"
+                    android:id="@+id/iv_brand"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="@dimen/profile_image_user_top_margin"
+
+                    app:civ_border_color="@color/back_to_back"
+                    app:civ_border_width="5dp"
+                    app:civ_shadow_radius="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_name_brand"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/iransans"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textColor="#474747"
+                    android:lineSpacingExtra="10sp"
+                    android:gravity="end"
+                    android:text="@{TypeRent.title}"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/item_card_main"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="4dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/tv_title_item_type_rent"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/iransans"
+                android:text="@{TypeRent.title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_description_item_type_rent"
+                style="@style/H8Left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/iransans"
+                android:gravity="right"
+                android:text="@{TypeRent.description}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_item_type_rent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_"
+            android:layout_marginBottom="4.5dp"
+            android:layout_marginTop="4.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#eee" />
+    </LinearLayout>
+
+</layout>

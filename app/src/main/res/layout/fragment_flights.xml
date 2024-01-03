@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+      android:gravity="right"
+        android:id="@+id/cardMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pale_gray"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+            <ImageView
+                android:id="@+id/iv_back_frament"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RelativeLayout
+                android:layout_marginStart="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/btn_filter"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bookmark_search_layout_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_filter"
+                    android:padding="3dp"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"/>
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginRight="22dp"
+            android:id="@+id/time_flight_recycler"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:layout_marginTop="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/search_flight"
+                style="@style/H6Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/btn_sort"
+               android:background="@drawable/item_passenger_radus"
+                android:layout_alignParentLeft="true"
+                android:layout_width="113dp"
+                android:layout_height="30dp">
+                <TextView
+                    android:textColor="@color/medium_color"
+                    android:lineSpacingExtra="9sp"
+                    android:textSize="11sp"
+                    android:text="بیشترین قیمت"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:progressTint="@color/sun_yellow"
+            android:layoutDirection="rtl"
+            android:progress="50"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/progress"
+            android:progressBackgroundTint="#e7e8ee"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:max="100" />
+
+  <!--      <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/flight_recycler"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>-->
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:id="@+id/flight_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_demo_child_count="12"
+            app:shimmer_demo_angle="20"
+            tools:listitem="@layout/item_main"
+            app:shimmer_demo_layout="@layout/item_main"
+            />
+
+
+
+
+    </LinearLayout>
+</layout>

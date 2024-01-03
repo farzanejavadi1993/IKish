@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="tourKish"
+            type="ikish.aftab.ws.android.model.TourKishModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+
+
+        android:layout_width="match_parent"
+
+        android:layout_height="113dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            app:siRadius="12dp"
+            android:layout_marginLeft="22dp"
+            android:scaleType="centerCrop"
+            app:siBorderWidth="0.02dp"
+            app:siBorderColor="@color/pale_gray"
+            android:src="@drawable/marjani"
+            android:id="@+id/home_iv_tour_item"
+            android:layout_width="@dimen/home_iv_tour_item_width"
+            android:layout_height="@dimen/home_iv_tour_item_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginRight="22dp"
+            android:text="@{tourKish.title}"
+            style="@style/H4Left"
+            android:id="@+id/home_tv_title_tour_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginRight="22dp"
+            android:text="@{tourKish.description}"
+            style="@style/H6Right"
+            android:gravity="right"
+            android:id="@+id/home_tv_description_tour_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/home_iv_tour_item"
+            app:layout_constraintTop_toBottomOf="@+id/home_tv_title_tour_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

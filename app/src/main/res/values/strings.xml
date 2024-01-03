@@ -1,0 +1,357 @@
+<resources>
+    <string name="app_name">Ikish</string>
+
+
+    <string name="site_key">6LcQhd4bAAAAADPo8M-C2I8IYYcW0URIc3hp4kSO</string>
+    <string name="security_key">6LcQnsUbAAAAAJBBaQeNf-XcbxoqWapp4fg5Du9a</string>
+    <string name="login_mobile_text">شماره تلفن همراه را وارد کنید</string>
+    <string name="login_mobile_text_err">"شماره تلفن را وارد کنید"</string>
+    <string name="confirm_code">تایید کد</string>
+    <string name="internet_permission">دسترسی به اینترنت با خطا مواجه شد</string>
+    <string name="part1_message_code">یک کد تایید ۶ رقمی به صورت پیامک برای شماره </string>
+    <string name="part2_message_code"> ارسال شده است. آن را در فیلد بالا وارد کنید.</string>
+    <string name="error_connection">خطا در ارتباط با سرور</string>
+    <string name="request_token_google"> درخواست بیش از اندازه ، ریکپتچا را فعال کنید.</string>
+    <string name="enter_code">کد تایید ۶ رقمی را اینجا وارد کنید"</string>
+    <string name="reSend_code">ارسال مجدد کد تایید</string>
+    <string name="Unsuccessful_recaptcha">when communicating with the reCAPTCHA service.</string>
+    <string name="empty_token">result.getTokenResult().isEmpty()</string>
+    <string name="login_mobile_rule">با ثبت نام در آی کیش قوانین و مقررات آن را می پذیرم.</string>
+    <string name="login_example_mobile_hint">مثال: 09121234567</string>
+    <string name="login_rules_text">با ثبت نام در آی کیش قوانین و مقررات آن را می پذیرم.</string>
+    <string name="login_get_code_hint">دریافت کد تایید</string>
+    <string name="pay">پرداخت</string>
+    <string name="violet">استعلام خلافی</string>
+    <string name="bills_check">استعلام قبض</string>
+    <string name="home_weather_type_text">آفتابی</string>
+    <string name="home_weather_description_text">آب و هوای همکنون کیش</string>
+    <string name="home_tourism_description_text">مناسب تمامی تفریحات آبی</string>
+    <string name="home_condition_text">دریای آرام</string>
+    <string name="home_best_tours_text">محبوب‌ترین تورها برای شما</string>
+    <string name="home_interesting_offer_text">تخفیف های جذاب</string>
+    <string name="home_see_all_text">مشاهده همه</string>
+    <string name="superviser">سرپرست مهمان ها</string>
+    <string name="travel_considerations">ملاحظات سفر</string>
+    <string name="detail_factor">جزئیات فاکتور</string>
+    <string name="price_factor">مبلغ</string>
+    <string name="discont_factor">تخفیف</string>
+    <string name="price_payment">مبلغ قابل پرداخت</string>
+    <string name="home_title_item_offer">تخفیف ویژه در پاساژ پارس کیش</string>
+    <string name="home_description_item_offer">تا ۵۰٪ تخفیف در تمامی پاساژ همراه با قرعه کشی روزانه یک دستگاه ۲۰۶</string>
+    <string name="home_kish_gardi">کیش گردی</string>
+    <string name="home_title_tour_item">ساحل زیبای مرجانی</string>
+    <string name="home_description_tour_item">تور خانوادگی سه ستاره و اقتصادی همراه با برنامه‌های دیدنی…</string>
+    <string name="services_title">خدمات</string>
+    <string name="services_description">ارائه خدمات کیش محور</string>
+    <string name="services_title_tour_kish">کیش گردی</string>
+    <string name="services_description_tour_kish">معرفی مراکز تفریحی و گردشگری کیش</string>
+
+    <string name="services_title_hot_offer">تخفیف‌های داغ کیش</string>
+    <string name="services_description_hot_offer">تا ۷۰٪ تخفیف‌های ویژه مسافرین</string>
+
+    <string name="services_title_event">رویدادهای کیش</string>
+    <string name="services_description_event">مشاهده رویدادهای پیش روی کیش</string>
+
+    <string name="services_title_rent_car">اجاره خودرو</string>
+    <string name="services_description_rent_car">تجربه رانندگی با خودروهای لوکس و اسپرت</string>
+
+    <string name="services_title_violation_car">پرداخت خلافی خودرو</string>
+    <string name="services_description_violation_car">راهی آسان برای پرداخت جریمه‌ها در کیش</string>
+
+    <string name="services_title_rent_apartment">اجاره ویلا و آپارتمان</string>
+    <string name="services_description_rent_apartment">اقامت در یک مکان شخصی</string>
+
+    <string name="services_title_ticket_airplane">بلیط هواپیما</string>
+    <string name="services_description_ticket_airplane">خرید بلیط از بهترین خطوط هواپیمایی</string>
+
+    <string name="services_title_path">پرداخت قبوض</string>
+    <string name="services_description_path">استعلام و پرداخت قبوض آب، برق، تلفن ثابت و…</string>
+
+    <string name="profile_name_user">نام و نام خانوادگی کاربر</string>
+    <string name="profile_see">مشاهده پروفایل</string>
+
+
+    <string name="profile_title_credit">اعتبار</string>
+    <string name="profile_description_credit">مشاهد و افزایش اعتبار / جزئیات تراکنش‌ها</string>
+
+
+    <string name="profile_title_buy_rent">خرید‌ها و اجاره‌ها</string>
+    <string name="profile_description_buy_rent">تخفیف‌های خریداری شده / اجاره‌های صورت گرفته</string>
+
+    <string name="profile_title_ticket_airplane">بلیط هواپیما</string>
+    <string name="profile_description_ticket_airplane">مشاهده و دانلود بلیط‌‌های خریداری شده</string>
+
+    <string name="profile_title_passenger">لیست مسافرین</string>
+    <string name="profile_description_passenger">مشاهده لیست مسافرین / افزودن مسافر جدید</string>
+
+    <string name="profile_title_event">اعلانات</string>
+    <string name="profile_description_event">مشاهده پیام‌ها / اطلاع رسانی / سفارشات</string>
+
+    <string name="profile_title_question">سوالات متدوال</string>
+    <string name="profile_description_question">مشاهده پاسخ سوالات پر تکرار / ارسال تیکت</string>
+
+    <string name="profile_title_rules">قوانین و مقررات</string>
+    <string name="profile_description_rules">مشاهده قوانین جاری در آی کیش</string>
+
+
+    <string name="profile_title_rent_car">خودرو\u200Cهای من</string>
+    <string name="profile_description_rent_car">مشاهده لیست خودرو\u200Cها/رزروها</string>
+
+    <string name="profile_title_rent_villa">"اقامتگاه\u200Cهای من"</string>
+    <string name="profile_description_rent_villa">مشاهده لیست اقامتگاه\u200Cها/رزروها</string>
+
+    <string name="question_title_toolbar">سوالات متداول</string>
+    <string name="question_1">سوال یک سوال یک سوال یک</string>
+    <string name="confirmCode_title_toobar">ویرایش شماره تلفن</string>
+    <string name="confirmCode_title">کد تایید ۶ رقمی را اینجا وارد کنید</string>
+    <string name="confirmCode_Message">یک کد تایید ۶ رقمی به صورت پیامک برای شماره
+۰۹۱۲۱۲۳۴۵۶۷ ارسال شده است. آن را در فیلد بالا وارد کنید.</string>
+
+    <string name="confirmCode">تایید کد</string>
+    <string name="home">خانه</string>
+    <string name="passenger_title">لیست مسافران</string>
+    <string name="my_residence_title">اقامتگاه‌های من </string>
+    <string name="passenger_not_find">چیزی یافت نشد!</string>
+    <string name="passenger_not_find_description">شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید.</string>
+    <string name="my_residence_not_find_description_villa">شما هنوز هیچ اقامتگاهی ثبت نکرده‌اید. برای شروع روی دکمه افزودن اقامتگاه بزنید.</string>
+    <string name="my_residence_not_find_description_car">شما هنوز هیچ خودرویی ثبت نکرده‌اید. برای شروع روی دکمه افزودن خودرو بزنید.</string>
+
+    <string name="my_reserve_not_find_description">هنوز هیچ رزروی نداشته‌اید.</string>
+
+    <string name="airplane_not_find_description">شما هنوز هیچ بلیطی ثبت نکرده‌اید. برای شروع روی دکمه هواپیما در خدمات بزنید.</string>
+    <string name="passenger_add_user">افزودن مسافر</string>
+    <string name="my_residence_add_btn">افزودن اقامتگاه</string>
+    <string name="my_residence_add_btn_car">افزودن خودرو</string>
+
+    <string name="add_new_passenger">افزودن مسافر جدید</string>
+    <string name="passengers">مسافران</string>
+    <string name="add">افزودن</string>
+
+    <string name="new_passenger_first_name">نام</string>
+    <string name="new_passenger_last_name">نام خانوادگی</string>
+    <string name="new_passenger_english_first_name">نام به انگلیسی</string>
+    <string name="new_passenger_english_last_name">نام خانوادگی به انگلیسی</string>
+    <string name="new_passenger_national_code">کد ملی</string>
+    <string name="new_passenger_passport_number">شماره پاسپورت</string>
+    <string name="new_passenger_date_of_birth">تاریخ تولد</string>
+    <string name="new_passenger_gender">جنسیت</string>
+    <string name="new_passenger_mobile_number">شماره تلفن همراه</string>
+    <string name="iranian">تابعیت ایران</string>
+    <string name="other_country">تابعیت کشور دیگر</string>
+    <string name="other"> دیگر</string>
+    <string name="man">مرد</string>
+    <string name="woman">زن</string>
+    <string name="register">ثبت</string>
+    <string name="choose_date_birthday">تاریخ تولد خود را انتخاب کنید</string>
+
+    <string name="confirm">تایید</string>
+    <string name="continue_add_passenger">تایید مسافران و ادامه</string>
+    <string name="continue_add_residence"> ادامه</string>
+    <string name="continue_and_ok">تایید و ادامه</string>
+    <string name="payment_and_ok">تایید و پرداخت</string>
+    <string name="announcements">اعلانات </string>
+    <string name="kish_event">رویدادهای کیش </string>
+    <string name="filters">فیلتر ها</string>
+    <string name="range_price_in_day">بازه قیمت برای هر شب</string>
+    <string name="cancel">انصراف</string>
+    <string name="Possibilities_residence">امکانات اقامتگاه</string>
+    <string name="best_Possibilities">محبوب‌ترین امکانات در بین میهمانان</string>
+    <string name="cont_room">تعداد اتاق‌ها</string>
+    <string name="returned">برگردان</string>
+    <string name="close_list">بستن لیست</string>
+    <string name="show_Possibilities">نمایش همه امکانات</string>
+    <string name="type_residence"> نوع اقامتگاه</string>
+    <string name="apartment"> آپارتمان</string>
+    <string name="home_saheli"> ویلای ساحلی</string>
+    <string name="house">خانه ویلایی</string>
+    <string name="other_properties">ویژگی‌های دیگر</string>
+    <string name="single_passenger">پذیرایی از میهمان مجرد</string>
+
+    <string name="ticket_airplane">بلیط هواپیما</string>
+    <string name="extradition_ticket"> استرداد بلیط</string>
+    <string name="which_ticket_extradition"> کدام یک از بلیط‌های زیر را کنسل می‌کنید؟</string>
+    <string name="one_way">یک طرفه</string>
+    <string name="round_and_round">رفت و برگشت</string>
+    <string name="choose_origin">مبدا را انتخاب کنید</string>
+    <string name="choose_destination">مقصد را انتخاب کنید</string>
+    <string name="btn_date_move">ناریخ حرکت</string>
+    <string name="number_of_passengers">تعداد مسافران</string>
+    <string name="search">جستجو</string>
+    <string name="choose_flight">انتخاب این پرواز</string>
+    <string name="do_filter">اعمال فیلتر</string>
+    <string name="where_to_move">از کجا می‌خواهید حرکت کنید؟</string>
+    <string name="choose_your_origin">مبدا خود را انتخاب کنید.</string>
+    <string name="recently_seen">مشاهده های اخیر</string>
+    <string name="pupolar_location">مبدا های محبوب</string>
+    <string name="date_move_start">چه تاریخی می‌خواهید حرکت کنید؟</string>
+    <string name="select_time">Select a Time</string>
+    <string name="date_round">تاریخ رفت و برگشت</string>
+    <string name="title_extradition_dialog">نحوه دریافت مبلغ استرداد بلیط</string>
+    <string name="passenger_type_title">تعداد و نوع مسافران را مشخص کنید.</string>
+    <string name="old">بزرگسال</string>
+    <string name="amount_room">تعداد اتاق‌ها</string>
+    <string name="older_than_12">بزرگتر از 12 سال</string>
+    <string name="young">کودک</string>
+    <string name="between2_12">بین 2 تا 12 سال</string>
+    <string name="baby">خردسال</string>
+    <string name="younger_than">زیر 2 سال</string>
+    <string name="not_found_search">متاسفانه برای جستجوی شما نتیجه‌ای یافت نشد!
+لطفا دوباره تلاش کنید.</string>
+
+    <string name="search_again">جستجوی مجدد</string>
+    <string name="search_flight">در حال جستجو در بین پروازها</string>
+
+    <string name="mon">د</string>
+    <string name="tue">س</string>
+    <string name="wed">چ</string>
+    <string name="thu">پ</string>
+    <string name="fri">ج</string>
+    <string name="sat">ش</string>
+    <string name="sun">ی</string>
+
+
+    <string name="time_delivery">ساعت تحویل گرفتن</string>
+    <string name="time_delivery_description">۳ عصر روز شروع رزرو</string>
+    <string name="time_hand_over">ساعت تحویل دادن</string>
+    <string name="time_hand_over_desc">۱۲ ظهر روز پایان رزرو</string>
+    <string name="wifi">wifi</string>
+    <string name="reserve_residence">رزرو اقامتگاه</string>
+    <string name="suggest_residence">اقامتگاه های پیشنهادی</string>
+    <string name="location_residence">موقعیت اقامتگاه</string>
+    <string name="roles_residence">مقررات تحویل اقامتگاه</string>
+    <string name="see_all_possibilities">مشاهده همه امکانات (۱۲)</string>
+    <string name="see_all_comments">مشاهده همه نظرات</string>
+    <string name="seen_center_buy">نزدیک ‌ترین مراکز گردشگری به اقامتگاه</string>
+    <string name="Audio_service">سیستم صوتی و تصویری</string>
+    <string name="food">امکانات تبخ غذا</string>
+    <string name="best_kitchen">آشپزخانه مجهز</string>
+
+    <string name="about_residence">درباره اقامتگاه</string>
+    <string name="about_residence_description_full">شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید</string>
+    <string name="about_residence_description">شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید…</string>
+    <string name="status">وضعیت</string>
+    <string name="residence_in_map">موقعیت اقامتگاه‌ها روی نقشه</string>
+    <string name="seen">مشاهده</string>
+    <string name="seen_more">مشاهده بیشتر</string>
+    <string name="possibilities_in_residence">امکانت موجود در اقامتگاه</string>
+    <string name="price_every_day">قیمت برای هر شب</string>
+    <string name="edit_date">ویرایش تاریخ</string>
+    <string name="coast_residence">اقامتگاه ساحلی</string>
+    <string name="list_residence">لیست اقامتگاه‌ها</string>
+    <string name="residence_fit_for_you">"۷ اقامتگاه مناسب نیاز شما یافت شد."</string>
+    <string name="find_place">یافتن اقامتگاه‌ مناسب</string>
+    <string name="determination_amount_Guest">تعداد میهمان‌ها را مشخص کنید.</string>
+    <string name="credit_ikish">شارژ اعتبار آی‌کیش</string>
+    <string name="credit">اعتبار</string>
+    <string name="credit_balance">موجودی اعتبار</string>
+    <string name="recently_transaction">تراکنش‌های اخیر</string>
+    <string name="not_found_credit_description">شما هنوز تراکنشی ثبت نکرده‌اید.</string>
+    <string name="not_found_credit">چیزی یافت نشد!</string>
+    <string name="add_credit">افزایش اعتبار</string>
+    <string name="peyment_volation">پرداخت خلافی خودرو</string>
+    <string name="peyment_bills">پرداخت قبوض</string>
+
+    <string name="result_check">نتیجه استعلام</string>
+    <string name="bills_id">شناسه قبض</string>
+    <string name="pay_id">شناسه پرداخت</string>
+    <string name="barcode_number">شماره بارکد مندرج در پشت کارت</string>
+    <string name="accounting_bank">واریز به حساب بانکی</string>
+    <string name="accounting_bank_description">مبلغ بلیط طی ۲۴ ساعت آینده (با کسر کارمز بانک) به حساب بانکی شما واریز خواهد شد.</string>
+    <string name="credit_ikish_description">مبلغ بلیط طی ۲۴ ساعت آینده به اعتبار شما اضافه خواهد شد.</string>
+    <string name="sumPrice">قیمت کل</string>
+    <string name="dowload_ticket"> دانلود و مشاهده بلیط</string>
+    <string name="type_flight">نوع پرواز</string>
+    <string name="number_order">شماره سفارش</string>
+    <string name="need_room">به چه تعداد اتاق نیاز دارید؟</string>
+<!--    <string name="access_token" translatable="false">sk.eyJ1IjoiYWFsaWFzZ2FocnIiLCJhIjoiY2p1aDVrdGp6MHZsNzQ0bHA5aHY5eTA0YiJ9.BRwP4cbabF6GM5psW_mblg</string>-->
+
+
+    <string name="low_price">کمترین قیمت</string>
+    <string name="high_price">بیشترین قیمت</string>
+    <string name="time_flight">ساعت پرواز</string>
+    <string name="roles_cancel">قوانین کنسلی</string>
+    <string name="comments">نظرات</string>
+    <string name="comments_detail">شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید.</string>
+    <string name="roles_cancel_residence"> قوانین کنسلی اقامتگاه</string>
+    <string name="roles_add_passenger">اطلاعات مسافران باید با مدرک شناسایی آن‌ها (کارت ملی، شناسنامه و یا پاسپورت) تطابق داشته باشد. لطفا در ورود اطلاعات مسافران دقت کنید. تبعات هرگونه اشتباه در اطلاعات مسافران به عهده شما خواهد بود.</string>
+    <array name="initial_slider_values">
+        <item>1730000</item>
+        <item>390000</item>
+    </array>
+    <string name="choose_type_residence_bottom_sheet">نوع اقامتگاه را از بین گزینه‌های زیر انتخاب کنید</string>
+    <string name="choose_type_car_bottom_sheet">نوع خودرو را از بین گزینه‌های زیر انتخاب کنید.</string>
+    <string name="type_palace_residence">نوع و فضای اقامتگاه خود را مشخص کنید.</string>
+    <string name="type_brand_car">نوع و برند خودروی خود را مشخص کنید.</string>
+
+    <string name="title_type_residence">نوع اقامتگاه</string>
+    <string name="title_type_car">نوع خودرو</string>
+
+    <string name="choose_type_residence">از بین ۳ گزینه آپارتمانی، ویلای ساحلی و خانه ویلایی یک گزینه را انتخاب کنید. این گزینه در جستجوی کاربران نقش مهمی ایفا می‌کند.</string>
+    <string name="choose_type_car">از بین ۵ گزینه کوپه، کروکی، سواری، شاسی بلند و کوپه کروکی یک گزینه را انتخاب کنید. این گزینه در جستجوی کاربران نقش مهمی ایفا می‌کند.</string>
+
+    <string name="title_status_residence">وضعیت فضای اقامتگاه</string>
+    <string name="title_brand_car">برند خودرو</string>
+
+
+    <string name="description_status_residence">در صورتی که بخشی از فضای اقامتگاه مثل سرویس‌های بهداشتی، حمام و… اشتراکی است، گزینه فضای اشتراکی را انتخاب کنید. در غیر این صورت اگر تمام فضای اقامتگاه به صورت دربست است، گزینه دربست را انتخاب کنید.</string>
+    <string name="description_brand_car">برند سازنده خودرو را از بین گزینه‌های موجود انتخاب کنید.</string>
+
+    <string name="title_name_residence">نام اقامتگاه</string>
+    <string name="title_name_car">نام خودرو</string>
+
+    <string name="description_name_residence">برای انتخب نام اقامتگاه از اسامی کوتاه توصیف‌گر استفاده کنید.</string>
+    <string name="description_name_car">برای انتخاب نام خودرو از اسامی کوتاه شامل نام خودرو و مدل آن استفاده کنید. مثلا: فورد موستانگ ۲۰۱۸.</string>
+
+    <string name="title_about_residence">درباره اقامتگاه</string>
+    <string name="title_about_car">درباره خودرو</string>
+
+
+    <string name="description_about_residence">درباره ویژگی‌ها و هرآنچه اقامتگاه را شاخص می‌کند بنویسید. هرچه نگارش این بخش بهتر باشد تاثیر بیشتر بر روی کاربران خواهد داشت.</string>
+    <string name="description_about_car">درباره ویژگی‌ها و هرآنچه خودرو را شاخص می‌کند بنویسید. هرچه نگارش این بخش بهتر باشد تاثیر بیشتر بر روی کاربران خواهد داشت.</string>
+    <string name="add_photo_car">تصاویر خوب از خودرو باعث جلب نظر کاربران و فضاسازی بهتر آن‌ها از رانندگی با خودرو می‌شود. حداقل باید ۳ تصویر از خودرو ارسال کنید.</string>
+
+    <string name="title_least_time_rent_residence">حداقل مدت اجاره اقامتگاه چند شب است؟</string>
+    <string name="least_time_rent_residence">حداقل زمان اجاره اقامتگاه</string>
+    <string name="title_rule_residence">قوانین و مقررات اقامتگاه را مشخص کنید.</string>
+    <string name="rule1_residence">امکان پذیرایی از میهمانان مجرد</string>
+    <string name="rule2_residence">ورود حیوانات خانگی مجاز است</string>
+    <string name="rule3_residence">امکان پذیرایی از میهمانان مجرد</string>
+    <string name="rule4_residence">برگزاری جشن و مراسم مجاز است</string>
+    <string name="title_time_delivery_residence">ساعت تحویل اقامتگاه را مشخص کنید.</string>
+
+    <string name="title_delivery_residence">ساعت تحویل گرفتن اقامتگاه (Check In)</string>
+    <string name="description_delivery_residence">ساعتی که اجاره کننده در روز اول می‌توانند اقامتگاه را بگیرد.</string>
+    <string name="title_hand_over_residence">ساعت تحویل دادن اقامتگاه (Check Out)</string>
+    <string name="description_hand_over_residence">ساعتی که اجاره کننده در روز پایانی اجاره باید  اقامتگاه را دهند.</string>
+
+
+    <string name="activity_residence">فعالیت اقامتگاه</string>
+    <string name="edit_residence">ویرایش اقامتگاه</string>
+    <string name="calendar_price">تقویم قیمت گذاری</string>
+    <string name="comment_user_residence">نظرات کاربران درباره اقامتگاه</string>
+    <string name="activity_car">فعالیت خودرو</string>
+    <string name="edit_car">ویرایش خودرو</string>
+    <string name="comment_user_car">نظرات کاربران درباره خودرو</string>
+
+
+
+
+
+    <string name="title_least_time_rent_car">حداقل مدت اجاره خودرو چند شب است؟</string>
+    <string name="least_time_rent_car">حداقل زمان اجاره خورو</string>
+    <string name="title_rule_car">قوانین و مقررات خودرو را مشخص کنید.</string>
+    <string name="rule1_car">راننده باید بالای ۳۰ سال باشد.</string>
+    <string name="rule2_car">راننده باید اراری گواهینامه باشد.</string>
+    <string name="rule3_car">ورود حیوانات خانگی مجاز است</string>
+    <string name="rule4_car">برگزاری جشن و مراسم مجاز است</string>
+    <string name="title_time_delivery_car">ساعت تحویل خورو را مشخص کنید.</string>
+    <string name="title_delivery_car">ساعت تحویل گرفتن خودرو (Check In)</string>
+    <string name="description_delivery_car">ساعتی که اجاره کننده در روز اول می‌توانند خودرو را تحویل بگیرد.</string>
+    <string name="title_hand_over_car">ساعت تحویل دادن خودرو (Check Out)</string>
+    <string name="description_hand_over_car">ساعتی که اجاره کننده در روز پایانی اجاره باید خودرو را تحویل دهند.</string>
+
+    <string name="mapbox_access_token">pk.eyJ1IjoiZGV2ZWxvcGVyZ2lybDIwMTc3IiwiYSI6ImNrcmFieGN3azB3cGQydm1jOG9ienJheGMifQ._cTGNkLzOYMwCryu_YQnLw</string>
+
+
+
+</resources>

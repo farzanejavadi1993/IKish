@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pale_gray"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/confirmCode_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/toolbar_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/get_code_iv_back"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_marginEnd="22dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirmCode_tv_title_toolbar"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/confirmCode_title_toobar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/get_code_iv_back"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cofirmCode_tv_title"
+            style="@style/H7Right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="22dp"
+            android:text="@string/confirmCode_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmCode_toolbar" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmCode_et_code"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/de_active_invalid_name_border"
+            android:fontFamily="@font/iransans"
+            android:inputType="number"
+            android:layoutDirection="rtl"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/medium_color"
+            android:textColorHint="@color/invalid_name_color"
+            android:textSize="@dimen/login_mobile_number_size"
+            app:errorEnabled="true"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+
+            app:layout_constraintStart_toEndOf="@+id/confirmCode_tv_timer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cofirmCode_tv_title" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/confirmCode_tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:lineSpacingExtra="9sp"
+            android:text="00:58"
+            android:textColor="@color/invalid_name_color"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/confirmCode_et_code"
+            app:layout_constraintStart_toStartOf="@+id/confirmCode_et_code"
+            app:layout_constraintTop_toTopOf="@+id/confirmCode_et_code" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rlRecaptcha"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/pale_gray"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmCode_et_code">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/checkboxRecaptcha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="I'm not a robot"
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/login_mobile_number_size" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/recaptchaa" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/confirmCode_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="22dp"
+            android:gravity="center"
+            android:lineSpacingExtra="9sp"
+            android:text="@string/confirmCode_Message"
+            android:textColor="@color/medium_color"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlRecaptcha" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirmCode"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/very_light_color"
+            android:enabled="false"
+            android:fontFamily="@font/iransans"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/confirmCode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_get_code_margin"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmCode_message">
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/confirmCode_et_code"
+            app:layout_constraintStart_toEndOf="@+id/confirmCode_tv_timer"
+            app:layout_constraintTop_toTopOf="@+id/confirmCode_et_code" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

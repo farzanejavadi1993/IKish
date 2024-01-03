@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="@color/pale_gray"
+    android:layout_height="match_parent"
+   >
+
+
+    <ImageView
+        android:src="@drawable/logo"
+        android:id="@+id/login_iv_logo"
+        android:layout_width="@dimen/login_logo_size"
+        android:layout_height="@dimen/login_logo_size"
+        android:layout_marginStart="@dimen/login_logo_left_right_margin"
+        android:layout_marginTop="@dimen/login_logo_top_margin"
+        android:layout_marginEnd="@dimen/login_logo_left_right_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/login_tv_mobile"
+        android:text="@string/login_mobile_text"
+        android:textSize="@dimen/login_mobile_medium_size"
+        android:textColor="@color/medium_color"
+        android:textStyle="normal"
+        android:lineSpacingExtra="9sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_mobile_medium_top_margin"
+        android:layout_marginEnd="@dimen/login_mobile_medium_end_margin"
+        android:layout_marginStart="@dimen/login_mobile_medium_end_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_iv_logo" />
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_tv_mobile"
+            android:layoutDirection="rtl"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:errorEnabled="true"
+            app:helperTextEnabled="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:background="@drawable/de_active_invalid_name_border"
+            android:maxLength="11"
+            android:fontFamily="@font/iransans"
+            android:inputType="number"
+            android:id="@+id/login_et_invalid_name"
+            android:hint="@string/login_example_mobile_hint"
+            android:textSize="@dimen/login_mobile_number_size"
+            android:textColor="@color/medium_color"
+            android:textColorHint="@color/invalid_name_color"
+            />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:id="@+id/rlRecaptcha"
+        android:backgroundTint="@color/pale_gray"
+        android:layout_height="56dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_et_invalid_name" >
+        <RelativeLayout
+            android:id="@+id/rootRecaptcha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/checkboxRecaptcha"
+                android:layout_centerVertical="true"
+                android:text="I'm not a robot"
+                android:textSize="@dimen/login_mobile_number_size"
+                android:textColor="@color/medium_color"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/recaptchaa"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/login_tv_rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="63dp"
+        android:text="@string/login_rules_text"
+        android:textColor="@color/medium_color"
+        android:textSize="@dimen/login_mobile_medium_size"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_et_invalid_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:backgroundTint="@color/very_light_color"
+        app:cornerRadius="10dp"
+        android:enabled="false"
+        android:fontFamily="@font/iransans"
+        android:id="@+id/btn_get_code"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="22dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/login_get_code_margin"
+        android:lineSpacingExtra="10sp"
+        android:text="@string/login_get_code_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_rules" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_et_invalid_name"
+        app:layout_constraintStart_toStartOf="@+id/login_et_invalid_name"
+        app:layout_constraintTop_toTopOf="@+id/login_et_invalid_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

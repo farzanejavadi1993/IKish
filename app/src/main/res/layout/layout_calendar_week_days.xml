@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTitleWeekContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:layout_margin="1dp"
+        android:layout_weight="1.25"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek1"
+        android:text="@string/sat" />
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:layout_margin="1dp"
+        android:layout_weight="1.25"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek2"
+        android:text="@string/sun" />
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:layout_margin="1dp"
+        android:layout_weight="1.25"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek3"
+        android:text="@string/mon" />
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        style="@style/WeekDayTitleStyle"
+        android:layout_margin="1dp"
+        android:layout_weight="1.25"
+        android:tag="dayOfWeek4"
+        android:text="@string/tue" />
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:layout_margin="1dp"
+        style="@style/WeekDayTitleStyle"
+        android:layout_weight="1.25"
+        android:tag="dayOfWeek5"
+        android:text="@string/wed" />
+
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:layout_margin="1dp"
+
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek6"
+        android:text="@string/thu" />
+
+   <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+       android:layout_margin="1dp"
+       android:layout_weight="1.25"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek7"
+        android:text="@string/fri" />
+
+</LinearLayout>

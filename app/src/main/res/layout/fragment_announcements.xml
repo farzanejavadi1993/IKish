@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:rotationY="180"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@color/pale_gray"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        app:strokeColor="#e3e3e3"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/pale_gray"
+        app:strokeWidth="1dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="right"
+                android:layout_margin="12dp"
+                style="@style/H5Right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                />
+
+            <TextView
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="۱۴۰۰/۰۳/۱۲ - ۱۲:۳۳"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@color/pale_gray"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        app:strokeColor="#e3e3e3"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/pale_gray"
+        app:strokeWidth="1dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="right"
+                android:layout_margin="12dp"
+                style="@style/H5Right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                />
+
+            <TextView
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="۱۴۰۰/۰۳/۱۲ - ۱۲:۳۳"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@color/pale_gray"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        app:strokeColor="#e3e3e3"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/pale_gray"
+        app:strokeWidth="1dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:gravity="right"
+                android:layout_margin="12dp"
+                style="@style/H5Right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید. شما هنوز هیچ مسافری ثبت نکرده‌اید. برای شروع روی دکمه ثبت مسافر بزنید."
+                />
+
+            <TextView
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="9sp"
+                android:text="۱۴۰۰/۰۳/۱۲ - ۱۲:۳۳"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:background="@color/pale_gray"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            >
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/passenger_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="19sp"
+                    android:text="@string/ticket_airplane"
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/passenger_title_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:src="@drawable/ic_back"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:id="@+id/tv_roles_add_passenger"
+                android:visibility="gone"
+                android:text="@string/roles_add_passenger"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                style="@style/H7Right"
+
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_icon_empty"
+                android:layout_width="@dimen/passenger_icon_empty_page"
+                android:layout_height="@dimen/passenger_icon_empty_page"
+                android:layout_marginTop="@dimen/passenger_icon_empty_page_top_margin"
+                android:src="@drawable/ic_not_found"/>
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="@dimen/not_find_size"
+                android:lineSpacingExtra="10sp"
+                android:id="@+id/tv_not_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/not_find_top_margin"
+                android:text="@string/passenger_not_find"
+                />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/invalid_name_color"
+                android:lineSpacingExtra="9sp"
+                android:textSize="@dimen/not_find_description_size"
+                android:id="@+id/tv_not_find_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/not_find_description_left_right_margin"
+                android:layout_marginTop="@dimen/not_find_description_top_margin"
+                android:layout_marginEnd="@dimen/not_find_description_left_right_margin"
+                android:text="@string/airplane_not_find_description"
+                />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_ticket_airplane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+</layout>

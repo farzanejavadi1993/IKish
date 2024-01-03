@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_marginLeft="0.5dp"
+    android:layout_marginRight="0.5dp"
+    android:layout_marginTop="0.75dp"
+    android:layout_marginBottom="0.75dp"
+    style="@style/ContainerDayOfWeek">
+    <View style="@style/StripRange" />
+    <ikish.aftab.ws.android.classes.calendarLibrary.CustomTextView
+        android:id="@+id/dayOfMonthText"
+     android:layout_width="44dp"
+        android:gravity="center"
+        android:textColor="@color/medium_color"
+        android:layout_height="44dp"
+        android:text="10" />
+    <ImageView
+        android:id="@+id/imgEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dayOfMonthText"
+        android:layout_alignEnd="@+id/dayOfMonthText"
+        android:layout_alignStart="@+id/dayOfMonthText"
+        android:layout_marginBottom="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_vector_circle" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_price_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_alignBottom="@+id/dayOfMonthText"
+        android:layout_alignRight="@+id/dayOfMonthText"
+        android:layout_marginRight="3dp"
+
+        android:textColor="@android:color/darker_gray"
+        android:textSize="10.5sp" />
+</RelativeLayout>
+

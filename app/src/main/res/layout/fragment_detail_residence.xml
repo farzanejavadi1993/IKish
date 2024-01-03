@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:background="@color/pale_gray"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginStart="22dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_bookmark"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginStart="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_bookmark"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="right"
+            android:orientation="vertical">
+
+
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/iv_residence"
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+/>
+
+            <TextView
+                android:id="@+id/tv_name_residence"
+                style="@style/H3Right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="22dp"
+                android:gravity="right"
+                android:text="اقامتگاه ساحلی" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="22dp">
+
+                <TextView
+                    android:id="@+id/tv_number_of_passenger"
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="۱۲ نفر" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/very_light_pink"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_number_of_passenger"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    style="@style/H5Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toStartOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="۴.۵" />
+
+                <ImageView
+                    android:id="@+id/img_start"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_rate"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/first_description"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="22dp"
+                android:text="توضیحات اولیه" />
+
+            <HorizontalScrollView
+                android:layoutDirection="rtl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="17dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_passenger"
+                        android:layout_width="89dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="#e3e3e3"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_marginStart="16dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_person" />
+
+                            <TextView
+                                android:id="@+id/tv_item1"
+                                android:layout_marginRight="16dp"
+                                style="@style/H7Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="۴ + ۱ میهمان" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="89dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="#e3e3e3"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:layout_marginStart="16dp"
+                                android:id="@+id/iv_item2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_two_bed" />
+
+                            <TextView
+
+                                android:layout_marginRight="16dp"
+                                android:id="@+id/tv_item2"
+                                style="@style/H7Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:text="2 اتاق خواب" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="89dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="#e3e3e3"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_item3"
+                                android:layout_marginStart="16dp"
+                                android:layout_width="20dp"
+
+                                android:layout_height="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_meeting_room_24px_1_" />
+
+                            <TextView
+
+                                android:id="@+id/tv_item3"
+                                android:layout_marginRight="16dp"
+                                style="@style/H7Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:text="۲ تخت ۲ نفره" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="89dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/pale_gray"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="#e3e3e3"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_item4"
+                                android:layout_marginStart="16dp"
+                                android:layout_width="20dp"
+
+                                android:layout_height="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_one_bed" />
+
+                            <TextView
+                                android:id="@+id/tv_item4"
+                                android:layout_marginRight="16dp"
+                                style="@style/H7Right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:text="۲ تخت ۲ نفره" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_superviser"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="22dp"
+                android:text="میزبان اقامتگاه" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="22dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profile_iv_user"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/profileimage"
+                    app:civ_border_width="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvName_user_comment"
+                    style="@style/H5Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_user"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="اصغر فرهادی مقدم" />
+
+                <RatingBar
+                    android:progressTint="@color/sun_yellow"
+                    android:rotation="180"
+                    android:rating="2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/ratingBar"
+                    android:layoutDirection="ltr"
+                    android:isIndicator="true"
+                    android:stepSize="0.1"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_user"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName_user_comment"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ratingBar">
+
+                    <TextView
+                        android:id="@+id/tv_number_of_passenger_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="10sp"
+                        android:text="4.5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <View
+                        android:id="@+id/view_comment"
+                        android:layout_width="1dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@color/very_light_pink"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_number_of_passenger_comment"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_rate_comment"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="#474747"
+                        android:lineSpacingExtra="9sp"
+                        android:text="12 نفر"
+                        android:layout_marginEnd="7dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/view_comment"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_residence"
+                />
+            <TextView
+                android:text="@string/about_residence_description"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="14dp"
+                style="@style/H6Right"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="10dp"
+                android:id="@+id/btn_about"
+                android:fontFamily="@font/iransans"
+                style="@style/H4Left"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                android:text="@string/seen_more"
+                app:strokeColor="@color/very_light_pink"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_Possibility"
+                android:text="@string/possibilities_in_residence"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnr_apartment"
+                android:orientation="vertical"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wifi"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_wifi"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/best_kitchen"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_countertops"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/food"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_microwave"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Audio_service"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_tv_24px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lnr_car"
+                android:orientation="vertical"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="بلوتوث"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_bluetooth"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="شارژی"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_charj"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="یو اس بی"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_iconfinder_usb_925801"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        style="@style/H6Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="موزیک آنلان"
+                        />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_musiconline"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="10dp"
+                android:id="@+id/btn_possibility"
+                android:fontFamily="@font/iransans"
+                style="@style/H4Left"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                android:text="@string/see_all_possibilities"
+                app:strokeColor="@color/very_light_pink"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/role_delivery"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roles_residence"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+                <LinearLayout
+                    android:gravity="right"
+                    android:background="@drawable/background_shape_layout"
+                    android:orientation="vertical"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="9dp"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_delivery"
+                        />
+                    <TextView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="4dp"
+                        style="@style/H5Right"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_delivery_description"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:background="@drawable/background_shape_layout"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="9dp"
+                        style="@style/H7Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/time_hand_over"
+                        />
+
+                    <TextView
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="4dp"
+                        style="@style/H5Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/time_hand_over_desc"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_map"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location_residence"
+                />
+            <com.google.android.material.card.MaterialCardView
+
+                android:backgroundTint="@color/pale_gray"
+                app:cardCornerRadius="12dp"
+                android:id="@+id/card_map"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayoutMap" >
+                <com.cedarstudios.cedarmapssdk.MapView
+
+                    android:layout_width="match_parent"
+                    android:id="@+id/mapView"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="10dp"
+                android:fontFamily="@font/iransans"
+                style="@style/H4Left"
+                android:id="@+id/map"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                android:text="@string/seen_center_buy"
+                app:strokeColor="@color/very_light_pink"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/roles_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="22dp"
+                android:backgroundTint="@color/pale_gray"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_price_item"
+                app:strokeColor="#e3e3e3"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_roles"
+                        style="@style/H5Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/roles_cancel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_fi_rr_angle_small_left"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/roles_cancel_residence"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="22dp"
+                android:backgroundTint="@color/pale_gray"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_price_item"
+                app:strokeColor="#e3e3e3"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_roles_residence"
+                        style="@style/H5Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/roles_cancel_residence"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_fi_rr_angle_small_left"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comments"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="22dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profile_iv_user_comment"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/profileimage"
+                    app:civ_border_width="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/user_comment"
+                    style="@style/H6Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="سمانه مهرانفر" />
+
+                <RatingBar
+                    android:progressTint="@color/sun_yellow"
+                    android:rotation="180"
+                    android:rating="2"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/ratingBarComment"
+                    android:layoutDirection="ltr"
+                    android:isIndicator="true"
+                    android:stepSize="0.1"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/profile_iv_user_comment"
+                    app:layout_constraintTop_toBottomOf="@+id/user_comment"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                style="@style/H6Right"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comments_detail"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                app:cornerRadius="10dp"
+                android:id="@+id/btn_comments"
+                android:fontFamily="@font/iransans"
+                style="@style/H4Left"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                android:text="@string/see_all_comments"
+                app:strokeColor="@color/very_light_pink"
+                app:strokeWidth="1dp"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/tv_suggest"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="30dp"
+                style="@style/H5Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/suggest_residence"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSuggestResidance"
+                android:layout_marginBottom="56dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+           >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+   <RelativeLayout
+
+       android:layout_alignParentBottom="true"
+       android:background="@color/white"
+       android:layout_width="match_parent"
+       android:layout_height="54dp">
+       <RelativeLayout
+           android:id="@+id/btn_reserve_residence"
+           android:layout_centerVertical="true"
+           android:background="@drawable/button_reserve_background"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="22dp"
+           android:layout_width="152dp"
+           android:layout_height="36dp">
+           <TextView
+               android:id="@+id/tv_reserv"
+               android:layout_centerInParent="true"
+               android:textStyle="bold"
+               android:textSize="14sp"
+               android:lineSpacingExtra="10sp"
+               android:text="@string/reserve_residence"
+               android:textColor="@color/white"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+       </RelativeLayout>
+       <TextView
+           style="@style/H8Left"
+           android:id="@+id/price_every_day"
+           android:text="@string/price_every_day"
+           android:layout_marginLeft="22dp"
+           android:layout_marginTop="6dp"
+           android:layout_alignParentLeft="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <TextView
+           android:layout_marginLeft="22dp"
+           android:id="@+id/tv_price"
+           android:layout_below="@id/price_every_day"
+           style="@style/H5Right"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="۳۴۰،۰۰۰ تومان"
+           />
+   </RelativeLayout>
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="Bill"
+            type="ikish.aftab.ws.android.db.Bill" />
+    </data>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:strokeColor="#e3e3e3"
+        app:strokeWidth="1dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginLeft="22dp"
+        android:backgroundTint="@color/pale_gray"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/iv_bargh"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/bargh"
+                app:civ_border_color="@color/back_to_back"
+                app:civ_border_width="5dp"
+                app:civ_shadow_radius="10dp"
+                />
+            <TextView
+                android:id="@+id/tv_bargh"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/iv_bargh"
+                style="@style/H6Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قبض برق"/>
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@id/iv_bargh"
+                android:layout_below="@id/tv_bargh"
+                style="@style/H6Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Bill.D}"/>
+
+            <TextView
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_bargh"
+                android:layout_alignParentLeft="true"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#474747"
+                android:lineSpacingExtra="10sp"
+                android:text="@{Bill.P}"/>
+
+            <ImageView
+                android:src="@drawable/ic_fi_rr_angle_small_left"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_width="11dp"
+                android:layout_height="11dp"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

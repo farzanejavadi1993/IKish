@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="PhotoResidence"
+            type="ikish.aftab.ws.android.db.Residence" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/btn_add_photo"
+        android:layout_width="148dp"
+        android:layout_height="148dp"
+        android:layout_margin="10dp"
+     >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_fill_photo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/ic_photo_fill"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_add_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_fill_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="9sp"
+                android:text="افزودن تصویر"
+                android:textColor="#13b6ad"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/photo_residence"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+
+                app:siBorderColor="#eee"
+                app:siBorderWidth="0.5dp"
+                app:siRadius="12dp" />
+
+            <ImageView
+                android:id="@+id/btn_delete_photo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/circular_close_light" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

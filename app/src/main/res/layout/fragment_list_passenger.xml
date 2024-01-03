@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:background="@color/pale_gray"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            >
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/passenger_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/medium_color"
+                    android:textSize="@dimen/passenger_title_size"
+                    android:lineSpacingExtra="19sp"
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/passenger_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:src="@drawable/ic_back"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:id="@+id/tv_roles_add_passenger"
+                android:visibility="gone"
+                android:text="@string/roles_add_passenger"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_marginRight="22dp"
+                android:layout_marginLeft="22dp"
+                style="@style/H7Right"
+
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/pale_gray"
+                android:layout_marginRight="22dp"
+                android:id="@+id/layout_host_me"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                app:strokeColor="#e3e3e3"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="1dp"
+                android:layout_height="48dp">
+                <RelativeLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RadioButton
+                        android:layout_centerVertical="true"
+                        android:id="@+id/radio_host_me"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_radio"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/radio_host_me"
+                        style="@style/H5Right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="سرپرست میهمان‌ها من هستم"
+                        />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_icon_empty"
+                android:layout_width="@dimen/passenger_icon_empty_page"
+                android:layout_height="@dimen/passenger_icon_empty_page"
+                android:layout_marginTop="@dimen/passenger_icon_empty_page_top_margin"
+                android:src="@drawable/ic_not_found"/>
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/invalid_name_color"
+                android:textSize="@dimen/not_find_size"
+                android:lineSpacingExtra="10sp"
+                android:id="@+id/tv_not_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/not_find_top_margin"
+                android:text="@string/passenger_not_find"
+                />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/invalid_name_color"
+                android:lineSpacingExtra="9sp"
+                android:textSize="@dimen/not_find_description_size"
+                android:id="@+id/tv_not_find_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/not_find_description_left_right_margin"
+                android:layout_marginTop="@dimen/not_find_description_top_margin"
+                android:layout_marginEnd="@dimen/not_find_description_left_right_margin"
+                android:text="@string/passenger_not_find_description"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:fontFamily="@font/iransans"
+                app:iconGravity="textEnd"
+                app:iconSize="24dp"
+                app:icon="@drawable/ic_add_user"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/topaz"
+                android:id="@+id/btn_add_passenger"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@string/passenger_add_user"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_normal"
+
+                >
+
+
+                <!--     <TextView
+                         android:id="@+id/tv_add_user"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:lineSpacingExtra="10sp"
+                         android:text="@string/passenger_add_user"
+                         android:textColor="@color/white"
+                         android:textSize="14sp"
+                         android:textStyle="bold"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent" />
+
+                     <ImageView
+                         android:src="@drawable/ic_add_user"
+                         android:id="@+id/iv_add_user"
+                         android:layout_width="@dimen/image_size"
+                         android:layout_height="@dimen/image_size"
+                         android:layout_marginStart="8dp"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintStart_toEndOf="@+id/tv_add_user"
+                         app:layout_constraintTop_toTopOf="parent" />-->
+            </com.google.android.material.button.MaterialButton>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_passenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginBottom="22dp"
+            android:textAlignment="center"
+            android:id="@+id/btn_add_passenger_mini"
+            android:layout_width="138dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/iransans"
+            android:text="@string/passenger_add_user"
+            android:textColor="@color/topaz"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:cornerRadius="18dp"
+            app:iconTint="@color/topaz"
+            app:icon="@drawable/ic_add_user"
+            app:iconGravity="textEnd"
+            app:iconSize="24dp"
+            />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_button"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/card_radius_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_choose_passenger"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/topaz"
+            android:fontFamily="@font/iransans"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/continue_add_passenger"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

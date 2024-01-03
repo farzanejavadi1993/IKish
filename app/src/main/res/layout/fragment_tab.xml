@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<LinearLayout
+
+    android:background="@color/pale_gray"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.TabActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_marginBottom="3dp">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="16dp"
+            android:text="@string/announcements"
+            android:textColor="@color/medium_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:backgroundTint="@color/pale_gray"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layoutDirection="rtl"
+
+        app:tabTextColor="@color/invalid_name_color"
+        app:tabSelectedTextColor="@color/topaz"
+        app:tabIndicatorColor="@color/topaz"
+       style="@style/tab_text"
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_title_tab"
+        android:visibility="gone"
+        android:layout_marginBottom="-4dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="22dp"
+        android:gravity="right"
+        style="@style/H5Right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="اجاره های فعال"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:rotationY="180"
+        android:layout_marginTop="18dp"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+</layout>

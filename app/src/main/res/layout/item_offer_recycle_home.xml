@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clickable="true"
+
+        android:background="?attr/selectableItemBackground"
+        android:focusable="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="325dp"
+        android:layout_height="84dp">
+
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/home_iv_item_offer"
+            android:layout_width="111dp"
+            android:layout_marginLeft="17dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:siBorderWidth="0.02dp"
+            app:siBorderColor="@color/pale_gray"
+            app:siRadius="8dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/kish_shopping"
+            />
+
+        <TextView
+            android:textColor="@color/medium_color"
+            android:textStyle="bold"
+            android:lineSpacingExtra="10sp"
+            android:textSize="14sp"
+            android:id="@+id/home_tv_title_item_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7dp"
+            android:text="@{offer.title}"
+            app:layout_constraintEnd_toStartOf="@+id/home_iv_item_offer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_tv_description_item_offer"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="right"
+            android:text="@{offer.description}"
+            android:textColor="@color/medium_color"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/home_iv_item_offer"
+            app:layout_constraintTop_toBottomOf="@+id/home_tv_title_item_offer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+        <variable
+            name="offer"
+            type="ikish.aftab.ws.android.model.OfferModel" />
+    </data>
+</layout>
